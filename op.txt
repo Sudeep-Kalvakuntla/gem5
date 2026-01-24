@@ -1,0 +1,1195 @@
+Global frequency set at 1000000000000 ticks per second
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967232, (next-(2*max_machines)): 0, src: 0, next: 64, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967232, (next-(2*max_machines)): 0, src: 0, next: 64, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967232, (next-(2*max_machines)): 0, src: 0, next: 64, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967232, (next-(2*max_machines)): 0, src: 0, next: 64, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967232, (next-(2*max_machines)): 0, src: 0, next: 64, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs00: OutputPort:system.ruby.network.ext_links00.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967233, (next-(2*max_machines)): 1, src: 1, next: 65, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967233, (next-(2*max_machines)): 1, src: 1, next: 65, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967233, (next-(2*max_machines)): 1, src: 1, next: 65, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967233, (next-(2*max_machines)): 1, src: 1, next: 65, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967233, (next-(2*max_machines)): 1, src: 1, next: 65, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs01: OutputPort:system.ruby.network.ext_links01.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967234, (next-(2*max_machines)): 2, src: 2, next: 66, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967234, (next-(2*max_machines)): 2, src: 2, next: 66, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967234, (next-(2*max_machines)): 2, src: 2, next: 66, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967234, (next-(2*max_machines)): 2, src: 2, next: 66, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967234, (next-(2*max_machines)): 2, src: 2, next: 66, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs02: OutputPort:system.ruby.network.ext_links02.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967235, (next-(2*max_machines)): 3, src: 3, next: 67, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967235, (next-(2*max_machines)): 3, src: 3, next: 67, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967235, (next-(2*max_machines)): 3, src: 3, next: 67, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967235, (next-(2*max_machines)): 3, src: 3, next: 67, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967235, (next-(2*max_machines)): 3, src: 3, next: 67, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs03: OutputPort:system.ruby.network.ext_links03.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967236, (next-(2*max_machines)): 4, src: 4, next: 68, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967236, (next-(2*max_machines)): 4, src: 4, next: 68, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967236, (next-(2*max_machines)): 4, src: 4, next: 68, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967236, (next-(2*max_machines)): 4, src: 4, next: 68, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967236, (next-(2*max_machines)): 4, src: 4, next: 68, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs04: OutputPort:system.ruby.network.ext_links04.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967237, (next-(2*max_machines)): 5, src: 5, next: 69, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967237, (next-(2*max_machines)): 5, src: 5, next: 69, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967237, (next-(2*max_machines)): 5, src: 5, next: 69, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967237, (next-(2*max_machines)): 5, src: 5, next: 69, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967237, (next-(2*max_machines)): 5, src: 5, next: 69, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs05: OutputPort:system.ruby.network.ext_links05.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967238, (next-(2*max_machines)): 6, src: 6, next: 70, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967238, (next-(2*max_machines)): 6, src: 6, next: 70, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967238, (next-(2*max_machines)): 6, src: 6, next: 70, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967238, (next-(2*max_machines)): 6, src: 6, next: 70, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967238, (next-(2*max_machines)): 6, src: 6, next: 70, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs06: OutputPort:system.ruby.network.ext_links06.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967239, (next-(2*max_machines)): 7, src: 7, next: 71, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967239, (next-(2*max_machines)): 7, src: 7, next: 71, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967239, (next-(2*max_machines)): 7, src: 7, next: 71, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967239, (next-(2*max_machines)): 7, src: 7, next: 71, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967239, (next-(2*max_machines)): 7, src: 7, next: 71, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs07: OutputPort:system.ruby.network.ext_links07.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967240, (next-(2*max_machines)): 8, src: 8, next: 72, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967240, (next-(2*max_machines)): 8, src: 8, next: 72, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967240, (next-(2*max_machines)): 8, src: 8, next: 72, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967240, (next-(2*max_machines)): 8, src: 8, next: 72, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967240, (next-(2*max_machines)): 8, src: 8, next: 72, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs08: OutputPort:system.ruby.network.ext_links08.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967241, (next-(2*max_machines)): 9, src: 9, next: 73, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967241, (next-(2*max_machines)): 9, src: 9, next: 73, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967241, (next-(2*max_machines)): 9, src: 9, next: 73, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967241, (next-(2*max_machines)): 9, src: 9, next: 73, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967241, (next-(2*max_machines)): 9, src: 9, next: 73, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs09: OutputPort:system.ruby.network.ext_links09.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967242, (next-(2*max_machines)): 10, src: 10, next: 74, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967242, (next-(2*max_machines)): 10, src: 10, next: 74, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967242, (next-(2*max_machines)): 10, src: 10, next: 74, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967242, (next-(2*max_machines)): 10, src: 10, next: 74, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967242, (next-(2*max_machines)): 10, src: 10, next: 74, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs10: OutputPort:system.ruby.network.ext_links10.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967243, (next-(2*max_machines)): 11, src: 11, next: 75, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967243, (next-(2*max_machines)): 11, src: 11, next: 75, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967243, (next-(2*max_machines)): 11, src: 11, next: 75, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967243, (next-(2*max_machines)): 11, src: 11, next: 75, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967243, (next-(2*max_machines)): 11, src: 11, next: 75, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs11: OutputPort:system.ruby.network.ext_links11.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967244, (next-(2*max_machines)): 12, src: 12, next: 76, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967244, (next-(2*max_machines)): 12, src: 12, next: 76, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967244, (next-(2*max_machines)): 12, src: 12, next: 76, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967244, (next-(2*max_machines)): 12, src: 12, next: 76, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967244, (next-(2*max_machines)): 12, src: 12, next: 76, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs12: OutputPort:system.ruby.network.ext_links12.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967245, (next-(2*max_machines)): 13, src: 13, next: 77, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967245, (next-(2*max_machines)): 13, src: 13, next: 77, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967245, (next-(2*max_machines)): 13, src: 13, next: 77, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967245, (next-(2*max_machines)): 13, src: 13, next: 77, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967245, (next-(2*max_machines)): 13, src: 13, next: 77, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs13: OutputPort:system.ruby.network.ext_links13.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967246, (next-(2*max_machines)): 14, src: 14, next: 78, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967246, (next-(2*max_machines)): 14, src: 14, next: 78, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967246, (next-(2*max_machines)): 14, src: 14, next: 78, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967246, (next-(2*max_machines)): 14, src: 14, next: 78, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967246, (next-(2*max_machines)): 14, src: 14, next: 78, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs14: OutputPort:system.ruby.network.ext_links14.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967247, (next-(2*max_machines)): 15, src: 15, next: 79, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967247, (next-(2*max_machines)): 15, src: 15, next: 79, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967247, (next-(2*max_machines)): 15, src: 15, next: 79, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967247, (next-(2*max_machines)): 15, src: 15, next: 79, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967247, (next-(2*max_machines)): 15, src: 15, next: 79, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs15: OutputPort:system.ruby.network.ext_links15.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967248, (next-(2*max_machines)): 0, src: 16, next: 64, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967248, (next-(2*max_machines)): 0, src: 16, next: 64, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967248, (next-(2*max_machines)): 0, src: 16, next: 64, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967248, (next-(2*max_machines)): 0, src: 16, next: 64, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967248, (next-(2*max_machines)): 0, src: 16, next: 64, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs16: OutputPort:system.ruby.network.ext_links16.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967249, (next-(2*max_machines)): 1, src: 17, next: 65, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967249, (next-(2*max_machines)): 1, src: 17, next: 65, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967249, (next-(2*max_machines)): 1, src: 17, next: 65, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967249, (next-(2*max_machines)): 1, src: 17, next: 65, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967249, (next-(2*max_machines)): 1, src: 17, next: 65, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs17: OutputPort:system.ruby.network.ext_links17.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967250, (next-(2*max_machines)): 2, src: 18, next: 66, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967250, (next-(2*max_machines)): 2, src: 18, next: 66, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967250, (next-(2*max_machines)): 2, src: 18, next: 66, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967250, (next-(2*max_machines)): 2, src: 18, next: 66, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967250, (next-(2*max_machines)): 2, src: 18, next: 66, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs18: OutputPort:system.ruby.network.ext_links18.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967251, (next-(2*max_machines)): 3, src: 19, next: 67, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967251, (next-(2*max_machines)): 3, src: 19, next: 67, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967251, (next-(2*max_machines)): 3, src: 19, next: 67, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967251, (next-(2*max_machines)): 3, src: 19, next: 67, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967251, (next-(2*max_machines)): 3, src: 19, next: 67, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs19: OutputPort:system.ruby.network.ext_links19.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967252, (next-(2*max_machines)): 4, src: 20, next: 68, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967252, (next-(2*max_machines)): 4, src: 20, next: 68, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967252, (next-(2*max_machines)): 4, src: 20, next: 68, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967252, (next-(2*max_machines)): 4, src: 20, next: 68, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967252, (next-(2*max_machines)): 4, src: 20, next: 68, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs20: OutputPort:system.ruby.network.ext_links20.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967253, (next-(2*max_machines)): 5, src: 21, next: 69, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967253, (next-(2*max_machines)): 5, src: 21, next: 69, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967253, (next-(2*max_machines)): 5, src: 21, next: 69, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967253, (next-(2*max_machines)): 5, src: 21, next: 69, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967253, (next-(2*max_machines)): 5, src: 21, next: 69, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs21: OutputPort:system.ruby.network.ext_links21.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967254, (next-(2*max_machines)): 6, src: 22, next: 70, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967254, (next-(2*max_machines)): 6, src: 22, next: 70, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967254, (next-(2*max_machines)): 6, src: 22, next: 70, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967254, (next-(2*max_machines)): 6, src: 22, next: 70, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967254, (next-(2*max_machines)): 6, src: 22, next: 70, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs22: OutputPort:system.ruby.network.ext_links22.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967255, (next-(2*max_machines)): 7, src: 23, next: 71, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967255, (next-(2*max_machines)): 7, src: 23, next: 71, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967255, (next-(2*max_machines)): 7, src: 23, next: 71, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967255, (next-(2*max_machines)): 7, src: 23, next: 71, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967255, (next-(2*max_machines)): 7, src: 23, next: 71, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs23: OutputPort:system.ruby.network.ext_links23.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967256, (next-(2*max_machines)): 8, src: 24, next: 72, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967256, (next-(2*max_machines)): 8, src: 24, next: 72, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967256, (next-(2*max_machines)): 8, src: 24, next: 72, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967256, (next-(2*max_machines)): 8, src: 24, next: 72, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967256, (next-(2*max_machines)): 8, src: 24, next: 72, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs24: OutputPort:system.ruby.network.ext_links24.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967257, (next-(2*max_machines)): 9, src: 25, next: 73, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967257, (next-(2*max_machines)): 9, src: 25, next: 73, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967257, (next-(2*max_machines)): 9, src: 25, next: 73, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967257, (next-(2*max_machines)): 9, src: 25, next: 73, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967257, (next-(2*max_machines)): 9, src: 25, next: 73, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs25: OutputPort:system.ruby.network.ext_links25.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967258, (next-(2*max_machines)): 10, src: 26, next: 74, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967258, (next-(2*max_machines)): 10, src: 26, next: 74, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967258, (next-(2*max_machines)): 10, src: 26, next: 74, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967258, (next-(2*max_machines)): 10, src: 26, next: 74, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967258, (next-(2*max_machines)): 10, src: 26, next: 74, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs26: OutputPort:system.ruby.network.ext_links26.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967259, (next-(2*max_machines)): 11, src: 27, next: 75, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967259, (next-(2*max_machines)): 11, src: 27, next: 75, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967259, (next-(2*max_machines)): 11, src: 27, next: 75, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967259, (next-(2*max_machines)): 11, src: 27, next: 75, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967259, (next-(2*max_machines)): 11, src: 27, next: 75, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs27: OutputPort:system.ruby.network.ext_links27.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967260, (next-(2*max_machines)): 12, src: 28, next: 76, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967260, (next-(2*max_machines)): 12, src: 28, next: 76, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967260, (next-(2*max_machines)): 12, src: 28, next: 76, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967260, (next-(2*max_machines)): 12, src: 28, next: 76, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967260, (next-(2*max_machines)): 12, src: 28, next: 76, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs28: OutputPort:system.ruby.network.ext_links28.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967261, (next-(2*max_machines)): 13, src: 29, next: 77, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967261, (next-(2*max_machines)): 13, src: 29, next: 77, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967261, (next-(2*max_machines)): 13, src: 29, next: 77, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967261, (next-(2*max_machines)): 13, src: 29, next: 77, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967261, (next-(2*max_machines)): 13, src: 29, next: 77, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs29: OutputPort:system.ruby.network.ext_links29.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967262, (next-(2*max_machines)): 14, src: 30, next: 78, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967262, (next-(2*max_machines)): 14, src: 30, next: 78, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967262, (next-(2*max_machines)): 14, src: 30, next: 78, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967262, (next-(2*max_machines)): 14, src: 30, next: 78, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967262, (next-(2*max_machines)): 14, src: 30, next: 78, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs30: OutputPort:system.ruby.network.ext_links30.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967263, (next-(2*max_machines)): 15, src: 31, next: 79, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967263, (next-(2*max_machines)): 15, src: 31, next: 79, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967263, (next-(2*max_machines)): 15, src: 31, next: 79, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967263, (next-(2*max_machines)): 15, src: 31, next: 79, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4294967263, (next-(2*max_machines)): 15, src: 31, next: 79, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs31: OutputPort:system.ruby.network.ext_links31.network_links0 Vnet: 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4294967264, src: 64, next: 32, vnet:0 result: [NetDest (20)  - 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4294967264, src: 64, next: 32, vnet:1 result: [NetDest (20)  - 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4294967264, src: 64, next: 32, vnet:2 result: [NetDest (20)  - 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4294967264, src: 64, next: 32, vnet:3 result: [NetDest (20)  - 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4294967264, src: 64, next: 32, vnet:4 result: [NetDest (20)  - 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs00: Adding input port:system.ruby.network.ext_links00.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4294967280, src: 64, next: 48, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4294967280, src: 64, next: 48, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4294967280, src: 64, next: 48, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4294967280, src: 64, next: 48, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4294967280, src: 64, next: 48, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs16: Adding input port:system.ruby.network.ext_links16.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 1, src: 64, next: 65, vnet:0 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 1, src: 64, next: 65, vnet:1 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 1, src: 64, next: 65, vnet:2 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 1, src: 64, next: 65, vnet:3 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 1, src: 64, next: 65, vnet:4 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4, src: 64, next: 68, vnet:0 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4, src: 64, next: 68, vnet:1 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4, src: 64, next: 68, vnet:2 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4, src: 64, next: 68, vnet:3 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 0, (next-(2*max_machines)): 4, src: 64, next: 68, vnet:4 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 4294967265, src: 65, next: 33, vnet:0 result: [NetDest (20)  - 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 4294967265, src: 65, next: 33, vnet:1 result: [NetDest (20)  - 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 4294967265, src: 65, next: 33, vnet:2 result: [NetDest (20)  - 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 4294967265, src: 65, next: 33, vnet:3 result: [NetDest (20)  - 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 4294967265, src: 65, next: 33, vnet:4 result: [NetDest (20)  - 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs01: Adding input port:system.ruby.network.ext_links01.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 4294967281, src: 65, next: 49, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 4294967281, src: 65, next: 49, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 4294967281, src: 65, next: 49, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 4294967281, src: 65, next: 49, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 4294967281, src: 65, next: 49, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs17: Adding input port:system.ruby.network.ext_links17.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 0, src: 65, next: 64, vnet:0 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 0, src: 65, next: 64, vnet:1 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 0, src: 65, next: 64, vnet:2 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 0, src: 65, next: 64, vnet:3 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 0, src: 65, next: 64, vnet:4 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 2, src: 65, next: 66, vnet:0 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 2, src: 65, next: 66, vnet:1 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 2, src: 65, next: 66, vnet:2 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 2, src: 65, next: 66, vnet:3 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 2, src: 65, next: 66, vnet:4 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 5, src: 65, next: 69, vnet:0 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 5, src: 65, next: 69, vnet:1 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 5, src: 65, next: 69, vnet:2 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 5, src: 65, next: 69, vnet:3 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 1, (next-(2*max_machines)): 5, src: 65, next: 69, vnet:4 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 4294967266, src: 66, next: 34, vnet:0 result: [NetDest (20)  - 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 4294967266, src: 66, next: 34, vnet:1 result: [NetDest (20)  - 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 4294967266, src: 66, next: 34, vnet:2 result: [NetDest (20)  - 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 4294967266, src: 66, next: 34, vnet:3 result: [NetDest (20)  - 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 4294967266, src: 66, next: 34, vnet:4 result: [NetDest (20)  - 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs02: Adding input port:system.ruby.network.ext_links02.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 4294967282, src: 66, next: 50, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 4294967282, src: 66, next: 50, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 4294967282, src: 66, next: 50, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 4294967282, src: 66, next: 50, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 4294967282, src: 66, next: 50, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs18: Adding input port:system.ruby.network.ext_links18.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 1, src: 66, next: 65, vnet:0 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 1, src: 66, next: 65, vnet:1 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 1, src: 66, next: 65, vnet:2 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 1, src: 66, next: 65, vnet:3 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 1, src: 66, next: 65, vnet:4 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 3, src: 66, next: 67, vnet:0 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 3, src: 66, next: 67, vnet:1 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 3, src: 66, next: 67, vnet:2 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 3, src: 66, next: 67, vnet:3 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 3, src: 66, next: 67, vnet:4 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 6, src: 66, next: 70, vnet:0 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 6, src: 66, next: 70, vnet:1 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 6, src: 66, next: 70, vnet:2 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 6, src: 66, next: 70, vnet:3 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 2, (next-(2*max_machines)): 6, src: 66, next: 70, vnet:4 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 4294967267, src: 67, next: 35, vnet:0 result: [NetDest (20)  - 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 4294967267, src: 67, next: 35, vnet:1 result: [NetDest (20)  - 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 4294967267, src: 67, next: 35, vnet:2 result: [NetDest (20)  - 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 4294967267, src: 67, next: 35, vnet:3 result: [NetDest (20)  - 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 4294967267, src: 67, next: 35, vnet:4 result: [NetDest (20)  - 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs03: Adding input port:system.ruby.network.ext_links03.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 4294967283, src: 67, next: 51, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 4294967283, src: 67, next: 51, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 4294967283, src: 67, next: 51, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 4294967283, src: 67, next: 51, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 4294967283, src: 67, next: 51, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs19: Adding input port:system.ruby.network.ext_links19.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 2, src: 67, next: 66, vnet:0 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 2, src: 67, next: 66, vnet:1 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 2, src: 67, next: 66, vnet:2 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 2, src: 67, next: 66, vnet:3 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 2, src: 67, next: 66, vnet:4 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 7, src: 67, next: 71, vnet:0 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 7, src: 67, next: 71, vnet:1 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 7, src: 67, next: 71, vnet:2 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 7, src: 67, next: 71, vnet:3 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 3, (next-(2*max_machines)): 7, src: 67, next: 71, vnet:4 result: [NetDest (20)  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 4294967268, src: 68, next: 36, vnet:0 result: [NetDest (20)  - 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 4294967268, src: 68, next: 36, vnet:1 result: [NetDest (20)  - 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 4294967268, src: 68, next: 36, vnet:2 result: [NetDest (20)  - 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 4294967268, src: 68, next: 36, vnet:3 result: [NetDest (20)  - 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 4294967268, src: 68, next: 36, vnet:4 result: [NetDest (20)  - 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs04: Adding input port:system.ruby.network.ext_links04.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 4294967284, src: 68, next: 52, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 4294967284, src: 68, next: 52, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 4294967284, src: 68, next: 52, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 4294967284, src: 68, next: 52, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 4294967284, src: 68, next: 52, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs20: Adding input port:system.ruby.network.ext_links20.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 0, src: 68, next: 64, vnet:0 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 0, src: 68, next: 64, vnet:1 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 0, src: 68, next: 64, vnet:2 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 0, src: 68, next: 64, vnet:3 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 0, src: 68, next: 64, vnet:4 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 5, src: 68, next: 69, vnet:0 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 5, src: 68, next: 69, vnet:1 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 5, src: 68, next: 69, vnet:2 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 5, src: 68, next: 69, vnet:3 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 5, src: 68, next: 69, vnet:4 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 8, src: 68, next: 72, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 8, src: 68, next: 72, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 8, src: 68, next: 72, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 8, src: 68, next: 72, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 4, (next-(2*max_machines)): 8, src: 68, next: 72, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4294967269, src: 69, next: 37, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4294967269, src: 69, next: 37, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4294967269, src: 69, next: 37, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4294967269, src: 69, next: 37, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4294967269, src: 69, next: 37, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs05: Adding input port:system.ruby.network.ext_links05.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4294967285, src: 69, next: 53, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4294967285, src: 69, next: 53, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4294967285, src: 69, next: 53, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4294967285, src: 69, next: 53, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4294967285, src: 69, next: 53, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs21: Adding input port:system.ruby.network.ext_links21.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 1, src: 69, next: 65, vnet:0 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 1, src: 69, next: 65, vnet:1 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 1, src: 69, next: 65, vnet:2 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 1, src: 69, next: 65, vnet:3 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 1, src: 69, next: 65, vnet:4 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4, src: 69, next: 68, vnet:0 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4, src: 69, next: 68, vnet:1 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4, src: 69, next: 68, vnet:2 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4, src: 69, next: 68, vnet:3 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 4, src: 69, next: 68, vnet:4 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 6, src: 69, next: 70, vnet:0 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 6, src: 69, next: 70, vnet:1 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 6, src: 69, next: 70, vnet:2 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 6, src: 69, next: 70, vnet:3 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 6, src: 69, next: 70, vnet:4 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 9, src: 69, next: 73, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 9, src: 69, next: 73, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 9, src: 69, next: 73, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 9, src: 69, next: 73, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 5, (next-(2*max_machines)): 9, src: 69, next: 73, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 4294967270, src: 70, next: 38, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 4294967270, src: 70, next: 38, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 4294967270, src: 70, next: 38, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 4294967270, src: 70, next: 38, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 4294967270, src: 70, next: 38, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs06: Adding input port:system.ruby.network.ext_links06.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 4294967286, src: 70, next: 54, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 4294967286, src: 70, next: 54, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 4294967286, src: 70, next: 54, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 4294967286, src: 70, next: 54, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 4294967286, src: 70, next: 54, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs22: Adding input port:system.ruby.network.ext_links22.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 2, src: 70, next: 66, vnet:0 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 2, src: 70, next: 66, vnet:1 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 2, src: 70, next: 66, vnet:2 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 2, src: 70, next: 66, vnet:3 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 2, src: 70, next: 66, vnet:4 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 5, src: 70, next: 69, vnet:0 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 5, src: 70, next: 69, vnet:1 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 5, src: 70, next: 69, vnet:2 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 5, src: 70, next: 69, vnet:3 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 5, src: 70, next: 69, vnet:4 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 7, src: 70, next: 71, vnet:0 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 7, src: 70, next: 71, vnet:1 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 7, src: 70, next: 71, vnet:2 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 7, src: 70, next: 71, vnet:3 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 7, src: 70, next: 71, vnet:4 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 10, src: 70, next: 74, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 10, src: 70, next: 74, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 10, src: 70, next: 74, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 10, src: 70, next: 74, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 6, (next-(2*max_machines)): 10, src: 70, next: 74, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 4294967271, src: 71, next: 39, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 4294967271, src: 71, next: 39, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 4294967271, src: 71, next: 39, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 4294967271, src: 71, next: 39, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 4294967271, src: 71, next: 39, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs07: Adding input port:system.ruby.network.ext_links07.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 4294967287, src: 71, next: 55, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 4294967287, src: 71, next: 55, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 4294967287, src: 71, next: 55, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 4294967287, src: 71, next: 55, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 4294967287, src: 71, next: 55, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs23: Adding input port:system.ruby.network.ext_links23.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 3, src: 71, next: 67, vnet:0 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 3, src: 71, next: 67, vnet:1 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 3, src: 71, next: 67, vnet:2 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 3, src: 71, next: 67, vnet:3 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 3, src: 71, next: 67, vnet:4 result: [NetDest (20)  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 6, src: 71, next: 70, vnet:0 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 6, src: 71, next: 70, vnet:1 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 6, src: 71, next: 70, vnet:2 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 6, src: 71, next: 70, vnet:3 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 6, src: 71, next: 70, vnet:4 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 11, src: 71, next: 75, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 11, src: 71, next: 75, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 11, src: 71, next: 75, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 11, src: 71, next: 75, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 7, (next-(2*max_machines)): 11, src: 71, next: 75, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4294967272, src: 72, next: 40, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4294967272, src: 72, next: 40, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4294967272, src: 72, next: 40, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4294967272, src: 72, next: 40, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4294967272, src: 72, next: 40, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs08: Adding input port:system.ruby.network.ext_links08.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4294967288, src: 72, next: 56, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4294967288, src: 72, next: 56, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4294967288, src: 72, next: 56, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4294967288, src: 72, next: 56, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4294967288, src: 72, next: 56, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs24: Adding input port:system.ruby.network.ext_links24.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4, src: 72, next: 68, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4, src: 72, next: 68, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4, src: 72, next: 68, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4, src: 72, next: 68, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 4, src: 72, next: 68, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 9, src: 72, next: 73, vnet:0 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 9, src: 72, next: 73, vnet:1 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 9, src: 72, next: 73, vnet:2 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 9, src: 72, next: 73, vnet:3 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 9, src: 72, next: 73, vnet:4 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 12, src: 72, next: 76, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 12, src: 72, next: 76, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 12, src: 72, next: 76, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 12, src: 72, next: 76, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 8, (next-(2*max_machines)): 12, src: 72, next: 76, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 4294967273, src: 73, next: 41, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 4294967273, src: 73, next: 41, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 4294967273, src: 73, next: 41, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 4294967273, src: 73, next: 41, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 4294967273, src: 73, next: 41, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs09: Adding input port:system.ruby.network.ext_links09.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 4294967289, src: 73, next: 57, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 4294967289, src: 73, next: 57, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 4294967289, src: 73, next: 57, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 4294967289, src: 73, next: 57, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 4294967289, src: 73, next: 57, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs25: Adding input port:system.ruby.network.ext_links25.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 5, src: 73, next: 69, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 5, src: 73, next: 69, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 5, src: 73, next: 69, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 5, src: 73, next: 69, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 5, src: 73, next: 69, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 8, src: 73, next: 72, vnet:0 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 8, src: 73, next: 72, vnet:1 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 8, src: 73, next: 72, vnet:2 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 8, src: 73, next: 72, vnet:3 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 8, src: 73, next: 72, vnet:4 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 10, src: 73, next: 74, vnet:0 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 10, src: 73, next: 74, vnet:1 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 10, src: 73, next: 74, vnet:2 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 10, src: 73, next: 74, vnet:3 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 10, src: 73, next: 74, vnet:4 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 13, src: 73, next: 77, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 13, src: 73, next: 77, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 13, src: 73, next: 77, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 13, src: 73, next: 77, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 9, (next-(2*max_machines)): 13, src: 73, next: 77, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 4294967274, src: 74, next: 42, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 4294967274, src: 74, next: 42, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 4294967274, src: 74, next: 42, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 4294967274, src: 74, next: 42, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 4294967274, src: 74, next: 42, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs10: Adding input port:system.ruby.network.ext_links10.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 4294967290, src: 74, next: 58, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 4294967290, src: 74, next: 58, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 4294967290, src: 74, next: 58, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 4294967290, src: 74, next: 58, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 4294967290, src: 74, next: 58, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs26: Adding input port:system.ruby.network.ext_links26.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 6, src: 74, next: 70, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 6, src: 74, next: 70, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 6, src: 74, next: 70, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 6, src: 74, next: 70, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 6, src: 74, next: 70, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 9, src: 74, next: 73, vnet:0 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 9, src: 74, next: 73, vnet:1 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 9, src: 74, next: 73, vnet:2 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 9, src: 74, next: 73, vnet:3 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 9, src: 74, next: 73, vnet:4 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 11, src: 74, next: 75, vnet:0 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 11, src: 74, next: 75, vnet:1 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 11, src: 74, next: 75, vnet:2 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 11, src: 74, next: 75, vnet:3 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 11, src: 74, next: 75, vnet:4 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 14, src: 74, next: 78, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 14, src: 74, next: 78, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 14, src: 74, next: 78, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 14, src: 74, next: 78, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 10, (next-(2*max_machines)): 14, src: 74, next: 78, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 4294967275, src: 75, next: 43, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 4294967275, src: 75, next: 43, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 4294967275, src: 75, next: 43, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 4294967275, src: 75, next: 43, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 4294967275, src: 75, next: 43, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs11: Adding input port:system.ruby.network.ext_links11.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 4294967291, src: 75, next: 59, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 4294967291, src: 75, next: 59, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 4294967291, src: 75, next: 59, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 4294967291, src: 75, next: 59, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 4294967291, src: 75, next: 59, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs27: Adding input port:system.ruby.network.ext_links27.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 7, src: 75, next: 71, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 7, src: 75, next: 71, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 7, src: 75, next: 71, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 7, src: 75, next: 71, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 7, src: 75, next: 71, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 10, src: 75, next: 74, vnet:0 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 10, src: 75, next: 74, vnet:1 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 10, src: 75, next: 74, vnet:2 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 10, src: 75, next: 74, vnet:3 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 10, src: 75, next: 74, vnet:4 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 15, src: 75, next: 79, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 15, src: 75, next: 79, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 15, src: 75, next: 79, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 15, src: 75, next: 79, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 11, (next-(2*max_machines)): 15, src: 75, next: 79, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 4294967276, src: 76, next: 44, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 4294967276, src: 76, next: 44, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 4294967276, src: 76, next: 44, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 4294967276, src: 76, next: 44, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 4294967276, src: 76, next: 44, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs12: Adding input port:system.ruby.network.ext_links12.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 4294967292, src: 76, next: 60, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 4294967292, src: 76, next: 60, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 4294967292, src: 76, next: 60, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 4294967292, src: 76, next: 60, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 4294967292, src: 76, next: 60, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs28: Adding input port:system.ruby.network.ext_links28.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 8, src: 76, next: 72, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 8, src: 76, next: 72, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 8, src: 76, next: 72, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 8, src: 76, next: 72, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 8, src: 76, next: 72, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 13, src: 76, next: 77, vnet:0 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 13, src: 76, next: 77, vnet:1 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 13, src: 76, next: 77, vnet:2 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 13, src: 76, next: 77, vnet:3 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 12, (next-(2*max_machines)): 13, src: 76, next: 77, vnet:4 result: [NetDest (20)  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  - 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 4294967277, src: 77, next: 45, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 4294967277, src: 77, next: 45, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 4294967277, src: 77, next: 45, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 4294967277, src: 77, next: 45, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 4294967277, src: 77, next: 45, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs13: Adding input port:system.ruby.network.ext_links13.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 4294967293, src: 77, next: 61, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 4294967293, src: 77, next: 61, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 4294967293, src: 77, next: 61, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 4294967293, src: 77, next: 61, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 4294967293, src: 77, next: 61, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs29: Adding input port:system.ruby.network.ext_links29.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 9, src: 77, next: 73, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 9, src: 77, next: 73, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 9, src: 77, next: 73, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 9, src: 77, next: 73, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 9, src: 77, next: 73, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 12, src: 77, next: 76, vnet:0 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 12, src: 77, next: 76, vnet:1 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 12, src: 77, next: 76, vnet:2 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 12, src: 77, next: 76, vnet:3 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 12, src: 77, next: 76, vnet:4 result: [NetDest (20)  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  - 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 14, src: 77, next: 78, vnet:0 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 14, src: 77, next: 78, vnet:1 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 14, src: 77, next: 78, vnet:2 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 14, src: 77, next: 78, vnet:3 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 13, (next-(2*max_machines)): 14, src: 77, next: 78, vnet:4 result: [NetDest (20)  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  - 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 4294967278, src: 78, next: 46, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 4294967278, src: 78, next: 46, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 4294967278, src: 78, next: 46, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 4294967278, src: 78, next: 46, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 4294967278, src: 78, next: 46, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs14: Adding input port:system.ruby.network.ext_links14.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 4294967294, src: 78, next: 62, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 4294967294, src: 78, next: 62, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 4294967294, src: 78, next: 62, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 4294967294, src: 78, next: 62, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 4294967294, src: 78, next: 62, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs30: Adding input port:system.ruby.network.ext_links30.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 10, src: 78, next: 74, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 10, src: 78, next: 74, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 10, src: 78, next: 74, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 10, src: 78, next: 74, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 10, src: 78, next: 74, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 13, src: 78, next: 77, vnet:0 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 13, src: 78, next: 77, vnet:1 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 13, src: 78, next: 77, vnet:2 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 13, src: 78, next: 77, vnet:3 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 13, src: 78, next: 77, vnet:4 result: [NetDest (20)  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  - 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 15, src: 78, next: 79, vnet:0 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 15, src: 78, next: 79, vnet:1 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 15, src: 78, next: 79, vnet:2 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 15, src: 78, next: 79, vnet:3 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 14, (next-(2*max_machines)): 15, src: 78, next: 79, vnet:4 result: [NetDest (20)  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  - 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 4294967279, src: 79, next: 47, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 4294967279, src: 79, next: 47, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 4294967279, src: 79, next: 47, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 4294967279, src: 79, next: 47, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 4294967279, src: 79, next: 47, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs15: Adding input port:system.ruby.network.ext_links15.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 4294967295, src: 79, next: 63, vnet:0 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 4294967295, src: 79, next: 63, vnet:1 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 4294967295, src: 79, next: 63, vnet:2 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 4294967295, src: 79, next: 63, vnet:3 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 4294967295, src: 79, next: 63, vnet:4 result: [NetDest (20)  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  -  -  - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: system.ruby.network.netifs31: Adding input port:system.ruby.network.ext_links31.network_links1 with vnets 
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 11, src: 79, next: 75, vnet:0 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 11, src: 79, next: 75, vnet:1 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 11, src: 79, next: 75, vnet:2 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 11, src: 79, next: 75, vnet:3 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 11, src: 79, next: 75, vnet:4 result: [NetDest (20)  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  - 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 14, src: 79, next: 78, vnet:0 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 14, src: 79, next: 78, vnet:1 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 14, src: 79, next: 78, vnet:2 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 14, src: 79, next: 78, vnet:3 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+      0: global: Returning shortest path
+(src-(2*max_machines)): 15, (next-(2*max_machines)): 14, src: 79, next: 78, vnet:4 result: [NetDest (20)  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  - 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - ]
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.0
+gem5 compiled Jan 24 2026 09:51:31
+gem5 started Jan 24 2026 10:00:53
+gem5 executing on 4330439879d7, pid 8360
+command line: ./build/NULL/gem5.debug --debug-flags=RubyNetwork configs/example/garnet_synth_traffic.py --num-cpus=16 --num-dirs=16 --network=garnet --topology=Mesh_XY --mesh-rows=4 --sim-cycles=1000 --synthetic=uniform_random --injectionrate=0.01
+
+Exiting @ tick 1000 because Network Tester completed simCycles

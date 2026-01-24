@@ -115,8 +115,12 @@ class flit
 
     uint32_t m_width;
     int msgSize;
+
+    //void set_data(int data) { m_data = data; }
+    //int get_data() const { return m_data; }
   protected:
     int m_packet_id;
+    //int m_data;
     int m_id;
     int m_vnet;
     int m_vc;
