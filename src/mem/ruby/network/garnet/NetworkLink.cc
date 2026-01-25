@@ -90,6 +90,10 @@ NetworkLink::wakeup()
         flit *t_flit = link_srcQueue->getTopFlit();
         DPRINTF(RubyNetwork, "Transmission will finish at %ld :%s\n",
                 clockEdge(m_latency), *t_flit);
+
+        //Printing out metadata of each flit
+        DPRINTF(RubyNetwork, "|Flit %d (Type %d) | Data: %x |\n", t_flit->get_id(), t_flit->get_type() , t_flit->get_data());
+
         if (m_type != NUM_LINK_TYPES_) {
             // Only for assertions and debug messages
             assert(t_flit->m_width == bitWidth);
