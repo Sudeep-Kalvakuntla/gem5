@@ -10,7 +10,6 @@ cscope.out
 *~
 .*.swp
 .*.swo
-m5out
 /src/doxygen/html
 /docs/_build
 /ext/dramsim2/DRAMSim2
