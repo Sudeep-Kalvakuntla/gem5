@@ -92,7 +92,7 @@ NetworkLink::wakeup()
                 clockEdge(m_latency), *t_flit);
 
         //Printing out metadata of each flit
-        DPRINTF(RubyNetwork, "|Flit %d (Type %d) | Data: %x |\n", t_flit->get_id(), t_flit->get_type() , t_flit->get_data());
+        //DPRINTF(RubyNetwork, "|Flit %d (Type %d) | Data: %x |\n", t_flit->get_id(), t_flit->get_type() , t_flit->flit_bin);
 
         if (m_type != NUM_LINK_TYPES_) {
             // Only for assertions and debug messages

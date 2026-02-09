@@ -31,6 +31,7 @@
 
 
 #include "mem/ruby/network/garnet/NetworkInterface.hh"
+#include "mem/ruby/network/garnet/OutOfOrder.hh"
 
 #include <cassert>
 #include <cmath>
@@ -446,6 +447,9 @@ NetworkInterface::flitisizeMessage(MsgPtr msg_ptr, int vnet)
         m_net_ptr->increment_injected_packets(vnet);
         m_net_ptr->update_traffic_distribution(route);
         int packet_id = m_net_ptr->getNextPacketID();
+
+        std::vector<flit*> unsorted_f; 
+
         for (int i = 0; i < num_flits; i++) {
             m_net_ptr->increment_injected_flits(vnet);
             flit *fl = new flit(packet_id,
@@ -454,10 +458,33 @@ NetworkInterface::flitisizeMessage(MsgPtr msg_ptr, int vnet)
                 net_msg_ptr->getMessageSize()),
                 oPort->bitWidth(), curTick());
 
-                fl -> set_data(random());
+            fl->flit_bin = OOO::BinarizeFlit(fl);
+            fl->set_seq_num(i);
 
             fl->set_src_delay(curTick() - msg_ptr->getTime());
-            niOutVcs[vc].insert(fl);
+
+            unsorted_f.push_back(fl);
+            //niOutVcs[vc].insert(fl);
+        }
+
+        //Printing unsorted flits for debugging
+        DPRINTF(RubyNetwork, "Unsorted flits Begin\n");
+        for (auto it:unsorted_f){
+            DPRINTF(RubyNetwork, "|Flit %d (Type %d) | Seq Num %d | Data: %x |\n", it->get_id(), it->get_type(), it->get_seq_num(), it->flit_bin);
+        }
+        DPRINTF(RubyNetwork, "Unsorted flits End\n");
+
+        std::vector<flit*> sorted_f = OOO::HammingDistanceSort(unsorted_f);
+
+        //Printing sorted flits for debugging
+        DPRINTF(RubyNetwork, "Sorted flits Begin\n");
+        for (auto it:sorted_f){
+            DPRINTF(RubyNetwork, "|Flit %d (Type %d) | Seq Num %d | Data: %x |\n", it->get_id(), it->get_type(), it->get_seq_num(), it->flit_bin);
+        }
+        DPRINTF(RubyNetwork, "Sorted flits End\n");
+
+        for (int i = 0; i < num_flits; i++){
+            niOutVcs[vc].insert(sorted_f[i]);
         }
 
         m_ni_out_vcs_enqueue_time[vc] = curTick();

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+./build/NULL/gem5.opt \
+	--debug-flags=RubyNetwork \
+	configs/example/garnet_synth_traffic.py \
+	--num-cpus=16 \
+	--num-dirs=16 \
+	--network=garnet \
+	--topology=Mesh_XY \
+	--mesh-rows=4 \
+	--sim-cycles=100000 \
+	--synthetic=uniform_random \
+	--injectionrate=0.05 \
+	--inj-vnet=2 \
+	--link-width-bits=64 \
+       	> m5out/op.txt
