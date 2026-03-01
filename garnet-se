@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+./build/X86_MESI_Two_Level/gem5.opt \
+        --debug-flags=RubyNetwork \
+        configs/deprecated/example/se.py \
+        --ruby \
+        --num-cpus=16 \
+        --num-dirs=16 \
+        --network=garnet \
+        --topology=Mesh_XY \
+        --mesh-rows=4 \
+        --link-width-bits=64 \
+        --cmd=tests/test-progs/hello/bin/x86/linux/hello \
+        --cpu-type=TimingSimpleCPU \
+        --l1d_size=64kB \
+        --l1i_size=32kB \
+        --num-l2caches=16 \
+        --mem-size=2GB \
+        > m5out/op_se.txt
