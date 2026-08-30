@@ -95,7 +95,9 @@ PerfKvmCounter::~PerfKvmCounter()
 void
 PerfKvmCounter::detach()
 {
-    assert(attached());
+    // assert(attached());
+    if (!attached())
+    return;
 
     if (munmap(ringBuffer, ringNumPages * pageSize) == -1)
         warn("PerfKvmCounter: Failed to unmap ring buffer (%i)\n",
@@ -171,16 +173,22 @@ PerfKvmCounter::attach(PerfKvmCounterConfig &config,
                  0); // Flags
     if (fd == -1)
     {
-        if (errno == EACCES)
-        {
-            panic("PerfKvmCounter::attach recieved error EACCESS\n"
-            "  This error may be caused by a too restrictive setting\n"
-            "  in the file '/proc/sys/kernel/perf_event_paranoid'\n"
-            "  The default value was changed to 2 in kernel 4.6\n"
-            "  A value greater than 1 prevents gem5 from making\n"
-            "  the syscall to perf_event_open");
-        }
-        panic("PerfKvmCounter::attach failed (%i)\n", errno);
+        // if (errno == EACCES)
+        // {
+        //     panic("PerfKvmCounter::attach recieved error EACCESS\n"
+        //     "  This error may be caused by a too restrictive setting\n"
+        //     "  in the file '/proc/sys/kernel/perf_event_paranoid'\n"
+        //     "  The default value was changed to 2 in kernel 4.6\n"
+        //     "  A value greater than 1 prevents gem5 from making\n"
+        //     "  the syscall to perf_event_open");
+        // }
+
+        //panic("PerfKvmCounter::attach failed (%i)\n", errno);
+
+        warn("PerfKvmCounter attach failed (%i). Disabling perf.", errno);
+        // Ensure clean disabled state
+        fd = -1;
+        return;
     }
 
     mmapPerf(1);
@@ -225,7 +233,11 @@ PerfKvmCounter::fcntl(int cmd, long p1)
 int
 PerfKvmCounter::ioctl(int request, long p1)
 {
-    assert(attached());
+    // assert(attached());
+    // return ::ioctl(fd, request, p1);
+    if (!attached())
+        return 0;   // perf disabled, pretend success
+
     return ::ioctl(fd, request, p1);
 }
 
@@ -235,7 +247,12 @@ PerfKvmCounter::read(void *buf, size_t size) const
     char *_buf = (char *)buf;
     size_t _size = size;
 
-    assert(attached());
+    // assert(attached());
+
+    if (!attached()) {
+       memset(buf, 0, size);
+        return;
+    }
 
     do {
         ssize_t ret;

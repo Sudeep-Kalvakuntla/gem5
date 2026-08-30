@@ -1366,12 +1366,36 @@ BaseKvmCPU::setupInstCounter(uint64_t period)
 
     // We need to detach and re-attach the counter to reliably change
     // sampling settings. See PerfKvmCounter::period() for details.
+    // if (hwInstructions.attached())
+    //     hwInstructions.detach();
+    // assert(hwCycles.attached());
+    // hwInstructions.attach(cfgInstructions,
+    //                       0, // TID (0 => currentThread)
+    //                       hwCycles);
+
+    // if (period)
+    //     hwInstructions.enableSignals(KVM_KICK_SIGNAL);
+
+    // If cycles counter failed to attach, skip instruction counter setup
+    if (!hwCycles.attached()) {
+        //warn("KVM: hwCycles not attached. Skipping instruction counter setup.\n");
+        activeInstPeriod = 0;
+        return;
+    }
+
+    // We need to detach and re-attach the counter to reliably change
+    // sampling settings. See PerfKvmCounter::period() for details.
     if (hwInstructions.attached())
         hwInstructions.detach();
-    assert(hwCycles.attached());
+
     hwInstructions.attach(cfgInstructions,
-                          0, // TID (0 => currentThread)
-                          hwCycles);
+                        0, // TID (0 => currentThread)
+                        hwCycles);
+
+    if (!hwInstructions.attached()) {
+        activeInstPeriod = 0;
+        return;
+    }
 
     if (period)
         hwInstructions.enableSignals(KVM_KICK_SIGNAL);

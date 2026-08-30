@@ -40,7 +40,7 @@
 #include <ctime> //for setting srand() seed
 
 #include "base/cast.hh"
-#include "debug/RubyNetwork.hh"
+#include "debug/NocPower.hh"
 #include "mem/ruby/network/MessageBuffer.hh"
 #include "mem/ruby/network/garnet/Credit.hh"
 #include "mem/ruby/network/garnet/flitBuffer.hh"
@@ -69,7 +69,7 @@ NetworkInterface::NetworkInterface(const Params &p)
     vc_busy_counter(m_virtual_networks, 0)
 {
     m_stall_count.resize(m_virtual_networks);
-    niOutVcs.resize(0);  
+    niOutVcs.resize(0);
 
     int total_vcs = p.vcs_per_vnet * p.virt_nets;
     m_ni_expected_seq.assign(total_vcs, 0);
@@ -86,7 +86,7 @@ NetworkInterface::addInPort(NetworkLink *in_link,
 {
     InputPort *newInPort = new InputPort(in_link, credit_link);
     inPorts.push_back(newInPort);
-    DPRINTF(RubyNetwork, "Adding input port:%s with vnets %s\n",
+    DPRINTF(NocPower, "Adding input port:%s with vnets %s\n",
     in_link->name(), newInPort->printVnets());
 
     in_link->setLinkConsumer(this);
@@ -135,7 +135,7 @@ NetworkInterface::addOutPort(NetworkLink *out_link,
         name(), consumerVcs, m_vc_per_vnet);
     }
 
-    DPRINTF(RubyNetwork, "OutputPort:%s Vnet: %s\n",
+    DPRINTF(NocPower, "OutputPort:%s Vnet: %s\n",
     out_link->name(), newOutPort->printVnets());
 
     out_link->setSourceQueue(newOutPort->outFlitQueue(), this);
@@ -212,7 +212,7 @@ NetworkInterface::wakeup()
     for (auto &oPort: outPorts) {
         oss << oPort->routerID() << "[" << oPort->printVnets() << "] ";
     }
-    DPRINTF(RubyNetwork, "Network Interface %d connected to router:%s "
+    DPRINTF(NocPower, "Network Interface %d connected to router:%s "
             "woke up. Period: %ld\n", m_id, oss.str(), clockPeriod());
 
     assert(curTick() == clockEdge());
@@ -243,7 +243,7 @@ NetworkInterface::wakeup()
 
     /*********** Check the incoming flit link **********/
     /*
-    DPRINTF(RubyNetwork, "Number of input ports: %d\n", inPorts.size());
+    DPRINTF(NocPower, "Number of input ports: %d\n", inPorts.size());
     for (auto &iPort: inPorts) {
         NetworkLink *inNetLink = iPort->inNetLink();
         if (inNetLink->isReady(curTick())) {
@@ -257,14 +257,14 @@ NetworkInterface::wakeup()
                 // Resize to seq + 1, initializing new slots to nullptr
                 m_ni_rob[vc].resize(seq + 1, nullptr);
             }
-            
+
             m_ni_rob[vc][seq] = t_flit; //Storing flit in the ROB
 
-            //DPRINTF(RubyNetwork, "Recieved flit:%s\n", *t_flit);
-            DPRINTF(RubyNetwork, "NI received flit %d on VC %d. Buffering in ROB...\n", seq, vc);
+            //DPRINTF(NocPower, "Recieved flit:%s\n", *t_flit);
+            DPRINTF(NocPower, "NI received flit %d on VC %d. Buffering in ROB...\n", seq, vc);
             assert(t_flit->m_width == iPort->bitWidth());
 
-            while (m_ni_expected_seq[vc] < m_ni_rob[vc].size() && 
+            while (m_ni_expected_seq[vc] < m_ni_rob[vc].size() &&
                    m_ni_rob[vc][m_ni_expected_seq[vc]] != nullptr) {
 
                 uint32_t cur_seq = m_ni_expected_seq[vc];
@@ -295,7 +295,7 @@ NetworkInterface::wakeup()
                         m_ni_rob[vc][cur_seq] = nullptr;
                         m_ni_expected_seq[vc] = 0;
                         m_ni_rob[vc].clear(); //Shrinking the vector back to save memory for next packet
-                        
+
                         delete ordered_flit;
                     } else {
                         // No space available- Place tail flit in stall queue and
@@ -304,7 +304,7 @@ NetworkInterface::wakeup()
                         // unstall.
                         iPort->m_stall_queue.push_back(ordered_flit);
                         m_stall_count[vnet]++;
-                    
+
                         outNode_ptr[vnet]->registerDequeueCallback([this]() {
                             dequeueCallback(); });
 
@@ -321,11 +321,11 @@ NetworkInterface::wakeup()
                     // Simply send a credit back since we are not buffering
                     // this flit in the NI
                     iPort->sendCredit(cFlit);
-                
+
                     // Update stats and delete flit pointer.
                     incrementStats(ordered_flit);
 
-                    DPRINTF(RubyNetwork, "ROB releasing flit %d to network. Expected next: %d\n", 
+                    DPRINTF(NocPower, "ROB releasing flit %d to network. Expected next: %d\n",
                     ordered_flit->get_seq_num(), m_ni_expected_seq[vc] + 1);
 
                     m_ni_rob[vc][cur_seq] = nullptr; //Clearing the ROB slot
@@ -337,12 +337,12 @@ NetworkInterface::wakeup()
         }
     }
     */
-    DPRINTF(RubyNetwork, "Number of input ports: %d\n", inPorts.size());
+    DPRINTF(NocPower, "Number of input ports: %d\n", inPorts.size());
     for (auto &iPort: inPorts) {
         NetworkLink *inNetLink = iPort->inNetLink();
         if (inNetLink->isReady(curTick())) {
             flit *t_flit = inNetLink->consumeLink();
-            DPRINTF(RubyNetwork, "Recieved flit:%s\n", *t_flit);
+            DPRINTF(NocPower, "Recieved flit:%s\n", *t_flit);
             assert(t_flit->m_width == iPort->bitWidth());
 
             int vnet = t_flit->get_vnet();
@@ -415,7 +415,7 @@ NetworkInterface::wakeup()
     // back.
     for (auto &iPort: inPorts) {
         if (iPort->outCreditQueue()->getSize() > 0) {
-            DPRINTF(RubyNetwork, "Sending a credit %s via %s at %ld\n",
+            DPRINTF(NocPower, "Sending a credit %s via %s at %ld\n",
             *(iPort->outCreditQueue()->peekTopFlit()),
             iPort->outCreditLink()->name(), clockEdge(Cycles(1)));
             iPort->outCreditLink()->
@@ -494,7 +494,7 @@ NetworkInterface::flitisizeMessage(MsgPtr msg_ptr, int vnet)
     int num_flits = (int)divCeil((float) m_net_ptr->MessageSizeType_to_int(
         net_msg_ptr->getMessageSize()), (float)oPort->bitWidth());
 
-    DPRINTF(RubyNetwork, "Message Size:%d vnet:%d bitWidth:%d\n",
+    DPRINTF(NocPower, "Message Size:%d vnet:%d bitWidth:%d\n",
         m_net_ptr->MessageSizeType_to_int(net_msg_ptr->getMessageSize()),
         vnet, oPort->bitWidth());
 
@@ -551,7 +551,7 @@ NetworkInterface::flitisizeMessage(MsgPtr msg_ptr, int vnet)
         m_net_ptr->update_traffic_distribution(route);
         int packet_id = m_net_ptr->getNextPacketID();
 
-        std::vector<flit*> unsorted_f; 
+        std::vector<flit*> unsorted_f;
 
         for (int i = 0; i < num_flits; i++) {
             m_net_ptr->increment_injected_flits(vnet);
@@ -767,7 +767,7 @@ NetworkInterface::scheduleFlit(flit *t_flit)
     OutputPort *oPort = getOutportForVnet(t_flit->get_vnet());
 
     if (oPort) {
-        DPRINTF(RubyNetwork, "Scheduling at %s time:%ld flit:%s Message:%s\n",
+        DPRINTF(NocPower, "Scheduling at %s time:%ld flit:%s Message:%s\n",
         oPort->outNetLink()->name(), clockEdge(Cycles(1)),
         *t_flit, *(t_flit->get_msg_ptr()));
         oPort->outFlitQueue()->insert(t_flit);
