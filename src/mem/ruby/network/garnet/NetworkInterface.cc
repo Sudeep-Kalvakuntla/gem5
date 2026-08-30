@@ -588,7 +588,7 @@ NetworkInterface::flitisizeMessage(MsgPtr msg_ptr, int vnet)
             final_f = OOO::HammingDistanceSort(unsorted_f);
 
             // Calculate the new raw toggles
-            int toggles_after = OOO::calculateSwitchingToggles(final_f);
+            toggles_after = OOO::calculateSwitchingToggles(final_f);
         }
 
         // Attaching the packet-level toggle stats to the HEAD flit
