@@ -79,5 +79,9 @@ std::vector<gem5::ruby::garnet::flit *> HammingDistanceSort (const std::vector<g
 
 double calculateSwitchingProb ( const std::vector<gem5::ruby::garnet::flit *>& );
 
+int calculateSwitchingToggles( const std::vector<gem5::ruby::garnet::flit *>& f );
+
 void populateFlitData(std::vector<gem5::ruby::garnet::flit *>& packet, gem5::ruby::MsgPtr msg_ptr);
+
+void populateFlitData(std::vector<gem5::ruby::garnet::flit *>& packet);
 }

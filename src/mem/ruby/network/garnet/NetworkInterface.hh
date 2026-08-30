@@ -96,9 +96,10 @@ class NetworkInterface : public ClockedObject, public Consumer
     std::vector<uint32_t> m_ni_expected_seq;
 
     // For total switching probability
-    static double globalTotalProbBefore;
-    static double globalTotalProbAfter;
-    static uint64_t globalTotalPackets;
+    static uint64_t globalTotalSwitchesBefore;
+    static uint64_t globalTotalSwitchesAfter;
+    static uint64_t globalTotalPossibleSwitches;
+    static long long globalTotalPackets;
 
     class OutputPort
     {

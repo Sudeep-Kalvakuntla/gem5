@@ -1,6 +1,8 @@
 #include "mem/ruby/network/garnet/OutOfOrder.hh"
 #include "mem/ruby/network/garnet/flit.hh"
 
+#include <cstdlib> //For rand()
+
 #include "mem/ruby/system/RubySystem.hh"
 
 // Ruby Message types
@@ -147,13 +149,27 @@ namespace OOO {
         if (f_size < 2) return 0.0;
 
         int total_switches = 0;
-        int total_possible_switches = (f_size - 1) * HEAD_FLIT_SIZE;
+        int total_possible_switches = (f_size - 1) * (2 + 2 + 3 + 4 + 4 + 4 + 4 + 80); //seq num + num of VCs + type + src_ni + src_rt + dst_ni + dst_rt + hops + payload
 
         for (int i = 0; i < f_size-1; i++){
             total_switches += HammingDistance(f[i]->flit_bin, f[i+1]->flit_bin);
         }
 
         return (double)total_switches/total_possible_switches;
+    }
+
+    int
+    calculateSwitchingToggles( const std::vector<gem5::ruby::garnet::flit *>& f ){
+        int f_size = f.size();
+        if (f_size < 2) return 0;
+
+        int total_switches = 0;
+
+        for (int i = 0; i < f_size-1; i++){
+            total_switches += HammingDistance(f[i]->flit_bin, f[i+1]->flit_bin);
+        }
+
+        return total_switches;
     }
 
     void
@@ -210,4 +226,31 @@ namespace OOO {
             fl->set_payload(payload_to_pack);
         }
     } 
+
+    void
+    populateFlitData(std::vector<gem5::ruby::garnet::flit *>& packet)
+    {
+        for (auto& fl : packet) {
+            // Determine payload width based on flit type
+            int width = (fl->get_type() == gem5::ruby::garnet::HEAD_ || 
+                         fl->get_type() == gem5::ruby::garnet::HEAD_TAIL_) 
+                        ? W_PAYLOAD_HEAD 
+                        : W_PAYLOAD_BODY;
+
+            std::bitset<HEAD_FLIT_SIZE> payload_to_pack;
+            int bytes_to_read = width / 8;
+
+            for (int b = 0; b < bytes_to_read; b++) {
+                // Generate a random 8-bit payload byte
+                uint8_t byte_val = rand() % 256;
+
+                // Standard bitset packing
+                std::bitset<HEAD_FLIT_SIZE> byte_bits(byte_val);
+                payload_to_pack |= (byte_bits << (b * 8));
+            }
+
+            // Apply random data to the flit
+            fl->set_payload(payload_to_pack);
+        }
+    }
 }

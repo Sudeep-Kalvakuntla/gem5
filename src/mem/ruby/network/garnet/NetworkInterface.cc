@@ -36,6 +36,9 @@
 #include <cassert>
 #include <cmath>
 
+#include <cstdlib> //for srand()
+#include <ctime> //for setting srand() seed
+
 #include "base/cast.hh"
 #include "debug/RubyNetwork.hh"
 #include "mem/ruby/network/MessageBuffer.hh"
@@ -53,9 +56,10 @@ namespace ruby
 namespace garnet
 {
 
-double NetworkInterface::globalTotalProbBefore = 0.0;
-double NetworkInterface::globalTotalProbAfter = 0.0;
-uint64_t NetworkInterface::globalTotalPackets = 0;
+uint64_t NetworkInterface::globalTotalSwitchesBefore = 0;
+uint64_t NetworkInterface::globalTotalSwitchesAfter = 0;
+uint64_t NetworkInterface::globalTotalPossibleSwitches = 0;
+long long NetworkInterface::globalTotalPackets = 0;
 
 NetworkInterface::NetworkInterface(const Params &p)
   : ClockedObject(p), Consumer(this), m_id(p.id),
@@ -70,6 +74,10 @@ NetworkInterface::NetworkInterface(const Params &p)
     int total_vcs = p.vcs_per_vnet * p.virt_nets;
     m_ni_expected_seq.assign(total_vcs, 0);
     m_ni_rob.resize(total_vcs);
+
+    // Seed the random number generator using the current time 
+    // plus the unique ID of this Network Interface
+    srand(time(NULL) + m_id);
 }
 
 void
@@ -562,34 +570,58 @@ NetworkInterface::flitisizeMessage(MsgPtr msg_ptr, int vnet)
             //niOutVcs[vc].insert(fl);
         }
 
-        OOO::populateFlitData(unsorted_f, msg_ptr);
+        //OOO::populateFlitData(unsorted_f, msg_ptr);
+        OOO::populateFlitData(unsorted_f);
 
-        globalTotalPackets++;
+        // 1. Calculate raw toggles and possible toggles
+        int toggles_before = OOO::calculateSwitchingToggles(unsorted_f);
+        // Using W_PAYLOAD_BODY assuming you want to isolate payload switches
+        int possible_toggles = (unsorted_f.size() - 1) * W_PAYLOAD_BODY;
 
-        globalTotalProbBefore += OOO::calculateSwitchingProb(unsorted_f);
+        std::vector<flit*> final_f = unsorted_f;
 
-        //Printing unsorted flits for debugging
-        DPRINTF(RubyNetwork, "Unsorted flits Begin\n");
-        for (auto it:unsorted_f){
-            DPRINTF(RubyNetwork, "|Flit %d (Type %d) | Seq Num %d | Data: %x |\n", it->get_id(), it->get_type(), it->get_seq_num(), it->flit_bin);
+        // 2. Filter: Only track and sort multi-flit packets with actual toggles
+        if (unsorted_f.size() > 1 && toggles_before > 0) {
+
+            // Perform the sort
+            final_f = OOO::HammingDistanceSort(unsorted_f);
+
+            // Calculate the new raw toggles
+            int toggles_after = OOO::calculateSwitchingToggles(final_f);
+
+            // Only track packets that were ACTUALLY improved by the sort.
+            // This explicitly ignores flits that were already in an optimal/sorted order.
+            if (toggles_after < toggles_before) {
+                globalTotalPackets++;
+                globalTotalPossibleSwitches += possible_toggles;
+                globalTotalSwitchesBefore += toggles_before;
+                globalTotalSwitchesAfter += toggles_after;
+
+                // Printing unsorted flits for debugging
+                DPRINTF(OOO, "Unsorted flits Begin\n");
+                for (auto it:unsorted_f){
+                    DPRINTF(OOO, "|Flit %d (Type %d) | Seq Num %d | Data: %x |\n", it->get_id(), it->get_type(), it->get_seq_num(), it->flit_bin);
+                }
+                DPRINTF(OOO, "Unsorted flits End\n");
+
+                // Printing sorted flits for debugging
+                DPRINTF(OOO, "Sorted flits Begin\n");
+                for (auto it:final_f){
+                    DPRINTF(OOO, "|Flit %d (Type %d) | Seq Num %d | Data: %x |\n", it->get_id(), it->get_type(), it->get_seq_num(), it->flit_bin);
+                }
+                DPRINTF(OOO, "Sorted flits End\n");
+
+                // Print the true global switching probability
+                double prob_before_pct = ((double)globalTotalSwitchesBefore / globalTotalPossibleSwitches) * 100.0;
+                double prob_after_pct = ((double)globalTotalSwitchesAfter / globalTotalPossibleSwitches) * 100.0;
+
+                DPRINTF(OOO, "Running Global Stats: Switching Prob Before: %f, After: %f\n", prob_before_pct, prob_after_pct);
+            }
         }
-        DPRINTF(RubyNetwork, "Unsorted flits End\n");
 
-        std::vector<flit*> sorted_f = OOO::HammingDistanceSort(unsorted_f);
-
-        globalTotalProbAfter += OOO::calculateSwitchingProb(sorted_f);
-
-        //Printing sorted flits for debugging
-        DPRINTF(RubyNetwork, "Sorted flits Begin\n");
-        for (auto it:sorted_f){
-            DPRINTF(RubyNetwork, "|Flit %d (Type %d) | Seq Num %d | Data: %x |\n", it->get_id(), it->get_type(), it->get_seq_num(), it->flit_bin);
-        }
-        DPRINTF(RubyNetwork, "Sorted flits End\n");
-
-        DPRINTF(RubyNetwork, "Running Global Stats: Switching Prob Before: %f, After: %f\n", (globalTotalProbBefore / globalTotalPackets)*100, (globalTotalProbAfter / globalTotalPackets)*100);
-
+        // 4. Enqueue the flits into the Virtual Channel
         for (int i = 0; i < num_flits; i++){
-            niOutVcs[vc].insert(sorted_f[i]);
+            niOutVcs[vc].insert(final_f[i]);
         }
 
         m_ni_out_vcs_enqueue_time[vc] = curTick();
