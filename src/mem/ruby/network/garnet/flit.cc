@@ -71,6 +71,10 @@ flit::flit(int packet_id, int id, int  vc, int vnet, RouteInfo route, int size,
         m_type = TAIL_;
     else
         m_type = BODY_;
+
+    m_toggles_before = 0;
+    m_toggles_after = 0;
+    m_possible_toggles = 0;
 }
 
 flit *

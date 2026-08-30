@@ -570,15 +570,16 @@ NetworkInterface::flitisizeMessage(MsgPtr msg_ptr, int vnet)
             //niOutVcs[vc].insert(fl);
         }
 
-        //OOO::populateFlitData(unsorted_f, msg_ptr);
-        OOO::populateFlitData(unsorted_f);
+        OOO::populateFlitData(unsorted_f, msg_ptr);
+        //OOO::populateFlitData(unsorted_f);
 
         // 1. Calculate raw toggles and possible toggles
         int toggles_before = OOO::calculateSwitchingToggles(unsorted_f);
-        // Using W_PAYLOAD_BODY assuming you want to isolate payload switches
+        // Using W_PAYLOAD_BODY since we only want to isolate payload switches
         int possible_toggles = (unsorted_f.size() - 1) * W_PAYLOAD_BODY;
 
         std::vector<flit*> final_f = unsorted_f;
+        int toggles_after = toggles_before;
 
         // 2. Filter: Only track and sort multi-flit packets with actual toggles
         if (unsorted_f.size() > 1 && toggles_before > 0) {
@@ -588,38 +589,16 @@ NetworkInterface::flitisizeMessage(MsgPtr msg_ptr, int vnet)
 
             // Calculate the new raw toggles
             int toggles_after = OOO::calculateSwitchingToggles(final_f);
-
-            // Only track packets that were ACTUALLY improved by the sort.
-            // This explicitly ignores flits that were already in an optimal/sorted order.
-            if (toggles_after < toggles_before) {
-                globalTotalPackets++;
-                globalTotalPossibleSwitches += possible_toggles;
-                globalTotalSwitchesBefore += toggles_before;
-                globalTotalSwitchesAfter += toggles_after;
-
-                // Printing unsorted flits for debugging
-                DPRINTF(OOO, "Unsorted flits Begin\n");
-                for (auto it:unsorted_f){
-                    DPRINTF(OOO, "|Flit %d (Type %d) | Seq Num %d | Data: %x |\n", it->get_id(), it->get_type(), it->get_seq_num(), it->flit_bin);
-                }
-                DPRINTF(OOO, "Unsorted flits End\n");
-
-                // Printing sorted flits for debugging
-                DPRINTF(OOO, "Sorted flits Begin\n");
-                for (auto it:final_f){
-                    DPRINTF(OOO, "|Flit %d (Type %d) | Seq Num %d | Data: %x |\n", it->get_id(), it->get_type(), it->get_seq_num(), it->flit_bin);
-                }
-                DPRINTF(OOO, "Sorted flits End\n");
-
-                // Print the true global switching probability
-                double prob_before_pct = ((double)globalTotalSwitchesBefore / globalTotalPossibleSwitches) * 100.0;
-                double prob_after_pct = ((double)globalTotalSwitchesAfter / globalTotalPossibleSwitches) * 100.0;
-
-                DPRINTF(OOO, "Running Global Stats: Switching Prob Before: %f, After: %f\n", prob_before_pct, prob_after_pct);
-            }
         }
 
-        // 4. Enqueue the flits into the Virtual Channel
+        // Attaching the packet-level toggle stats to the HEAD flit
+        if (!final_f.empty()) {
+            final_f[0]->set_toggles_before(toggles_before);
+            final_f[0]->set_toggles_after(toggles_after);
+            final_f[0]->set_possible_toggles(possible_toggles);
+        }
+
+        // Enqueue the flits into the Virtual Channel
         for (int i = 0; i < num_flits; i++){
             niOutVcs[vc].insert(final_f[i]);
         }

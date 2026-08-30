@@ -36,6 +36,9 @@
 #include "debug/RubyNetwork.hh"
 #include "mem/ruby/network/garnet/CreditLink.hh"
 
+#include "mem/ruby/network/garnet/NetworkInterface.hh"
+#include "debug/OOO.hh"
+
 namespace gem5
 {
 
@@ -91,8 +94,18 @@ NetworkLink::wakeup()
         DPRINTF(RubyNetwork, "Transmission will finish at %ld :%s\n",
                 clockEdge(m_latency), *t_flit);
 
-        //Printing out metadata of each flit
-        //DPRINTF(RubyNetwork, "|Flit %d (Type %d) | Data: %x |\n", t_flit->get_id(), t_flit->get_type() , t_flit->flit_bin);
+        // Accumulate stats once per packet traversal using the HEAD flit
+        if (t_flit->get_type() == HEAD_ || t_flit->get_type() == HEAD_TAIL_) {
+            if (t_flit->get_possible_toggles() > 0) {
+                NetworkInterface::globalTotalPossibleSwitches += t_flit->get_possible_toggles();
+                NetworkInterface::globalTotalSwitchesBefore += t_flit->get_toggles_before();
+                NetworkInterface::globalTotalSwitchesAfter += t_flit->get_toggles_after();
+                NetworkInterface::globalTotalPackets++;
+                double prob_before_pct = ((double)NetworkInterface::globalTotalSwitchesBefore / NetworkInterface::globalTotalPossibleSwitches) * 100.0;
+                double prob_after_pct = ((double)NetworkInterface::globalTotalSwitchesAfter / NetworkInterface::globalTotalPossibleSwitches) * 100.0;
+                DPRINTF(OOO, "Hop Stats - Prob Before: %f, After: %f\n", prob_before_pct, prob_after_pct);
+            }
+        }
 
         if (m_type != NUM_LINK_TYPES_) {
             // Only for assertions and debug messages

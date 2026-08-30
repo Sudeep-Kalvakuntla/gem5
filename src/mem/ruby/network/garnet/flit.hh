@@ -51,6 +51,12 @@ namespace garnet
 
 class flit
 {
+  private:
+    // for switching activity calculation
+    int m_toggles_before;
+    int m_toggles_after;
+    int m_possible_toggles;
+
   public:
     flit() {}
     flit(int packet_id, int id, int vc, int vnet, RouteInfo route, int size,
@@ -125,6 +131,16 @@ class flit
 
     void set_payload(std::bitset<HEAD_FLIT_SIZE> data);
     std::bitset<HEAD_FLIT_SIZE> get_payload ();
+
+  public:
+    // for switching activity calculation 
+    void set_toggles_before(int t) { m_toggles_before = t; }
+    void set_toggles_after(int t)  { m_toggles_after = t; }
+    void set_possible_toggles(int t) { m_possible_toggles = t; }
+
+    int get_toggles_before() const { return m_toggles_before; }
+    int get_toggles_after() const  { return m_toggles_after; }
+    int get_possible_toggles() const { return m_possible_toggles; }
 
   protected:
     int m_packet_id;
