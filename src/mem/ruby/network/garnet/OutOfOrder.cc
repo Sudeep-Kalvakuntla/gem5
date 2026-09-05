@@ -19,22 +19,35 @@ namespace ruby {
 namespace garnet {
     uint32_t
     gem5::ruby::garnet::flit::get_seq_num (){
-        return (this->flit_bin >> O_SEQ_NUM_HEAD).to_ullong() & ((1<<W_SEQ_NUM_HEAD)-1);
+        if (m_type == HEAD_ || m_type == HEAD_TAIL_) {
+            return (this->flit_bin >> O_SEQ_NUM_HEAD).to_ullong() & ((1ULL<<W_SEQ_NUM_HEAD)-1);
+        } else {
+            return (this->flit_bin >> O_SEQ_NUM_BODY).to_ullong() & ((1ULL<<W_SEQ_NUM_BODY)-1);
+        }
     }
 
     void
     gem5::ruby::garnet::flit::set_seq_num (int seq){
-        std::bitset<HEAD_FLIT_SIZE> seq_bits(seq);
-        std::bitset<HEAD_FLIT_SIZE> mask_bits((1<<W_SEQ_NUM_HEAD)-1);
+        m_id = seq;
+        int offset = (m_type == HEAD_ || m_type == HEAD_TAIL_) ? O_SEQ_NUM_HEAD : O_SEQ_NUM_BODY;
+        int width = (m_type == HEAD_ || m_type == HEAD_TAIL_) ? W_SEQ_NUM_HEAD : W_SEQ_NUM_BODY;
 
-        seq_bits &= mask_bits;
-        this->flit_bin |= seq_bits << O_SEQ_NUM_HEAD;
+        std::bitset<HEAD_FLIT_SIZE> mask;
+        for (int i = 0; i < width; i++) mask.set(i + offset);
+
+        std::bitset<HEAD_FLIT_SIZE> seq_bits(seq);
+        seq_bits &= ((1ULL << width) - 1);
+
+        this->flit_bin &= ~mask;
+        this->flit_bin |= (seq_bits << offset);
     }
 
     std::bitset<HEAD_FLIT_SIZE>
     gem5::ruby::garnet::flit::get_payload() {
         int width = (m_type == HEAD_ || m_type == HEAD_TAIL_) ? W_PAYLOAD_HEAD : W_PAYLOAD_BODY;
         int offset = (m_type == HEAD_ || m_type == HEAD_TAIL_) ? O_PAYLOAD_HEAD : O_PAYLOAD_BODY;
+
+        if (width == 0) return std::bitset<HEAD_FLIT_SIZE>(0);
 
         std::bitset<HEAD_FLIT_SIZE> mask;
         for (int i = 0; i < width; i++) mask.set(i + offset);
@@ -49,6 +62,9 @@ namespace garnet {
         int offset = (m_type == HEAD_ || m_type == HEAD_TAIL_) ? O_PAYLOAD_HEAD : O_PAYLOAD_BODY;
 
         // Create a mask for the specific payload area in the 136-bit flit_bin
+        if (width == 0) return;
+
+        // Create a mask for the specific payload area in the flit_bin
         std::bitset<HEAD_FLIT_SIZE> mask;
         for (int i = 0; i < width; i++) mask.set(i + offset);
 
@@ -82,17 +98,13 @@ namespace OOO {
             pack(f->get_route().dest_ni,       O_DEST_NI_HEAD,        W_DEST_NI_HEAD);
             pack(f->get_route().dest_router,   O_DEST_ROUTER_HEAD,    W_DEST_ROUTER_HEAD);
             pack(f->get_route().hops_traversed,O_HOPS_TRAVERSED_HEAD, W_HOPS_TRAVERSED_HEAD);
-            pack(0,                     O_PAYLOAD_HEAD,        W_PAYLOAD_HEAD);
-
-            //TODO: Placing the payload into the flit after dereferencing it from messsage block
+            if (W_PAYLOAD_HEAD > 0) {
+                pack(0,                        O_PAYLOAD_HEAD,        W_PAYLOAD_HEAD);
+            }
         }
         else if (f->get_type() == gem5::ruby::garnet::BODY_ || f->get_type() == gem5::ruby::garnet::TAIL_) {
-
-            pack(f->get_vc(),   O_VC_ID_BODY, W_VC_ID_BODY);
-            pack(f->get_type(), O_TYPE_BODY, W_TYPE_BODY);
-            pack(0,      O_PAYLOAD_HEAD, W_PAYLOAD_HEAD);
-
-            //TODO: Placing the payload into the flit after dereferencing it from messsage block
+            // Body and tail flits carry pure payload (64 bits) and seq_num (8 bits)
+            // Payload is populated in populateFlitData(), and seq_num is set via set_seq_num()
         }
 
         return b;
@@ -149,7 +161,7 @@ namespace OOO {
         if (f_size < 2) return 0.0;
 
         int total_switches = 0;
-        int total_possible_switches = (f_size - 1) * (2 + 2 + 3 + 4 + 4 + 4 + 4 + 80); //seq num + num of VCs + type + src_ni + src_rt + dst_ni + dst_rt + hops + payload
+        int total_possible_switches = (f_size - 1) * HEAD_FLIT_SIZE;
 
         for (int i = 0; i < f_size-1; i++){
             total_switches += HammingDistance(f[i]->flit_bin, f[i+1]->flit_bin);

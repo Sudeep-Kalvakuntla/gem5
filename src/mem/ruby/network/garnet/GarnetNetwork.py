@@ -41,7 +41,7 @@ class GarnetNetwork(RubyNetwork):
     cxx_class = "gem5::ruby::garnet::GarnetNetwork"
 
     num_rows = Param.Int(0, "number of rows if 2D (mesh/torus/..) topology")
-    ni_flit_size = Param.UInt32(16, "network interface flit size in bytes")
+    ni_flit_size = Param.UInt32(8, "network interface flit size in bytes")
     vcs_per_vnet = Param.UInt32(4, "virtual channels per virtual network")
     buffers_per_data_vc = Param.UInt32(4, "buffers per data virtual channel")
     buffers_per_ctrl_vc = Param.UInt32(1, "buffers per ctrl virtual channel")
