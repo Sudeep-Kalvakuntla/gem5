@@ -581,15 +581,8 @@ NetworkInterface::flitisizeMessage(MsgPtr msg_ptr, int vnet)
         std::vector<flit*> final_f = unsorted_f;
         int toggles_after = toggles_before;
 
-        // 2. Filter: Only track and sort multi-flit packets with actual toggles
-        if (unsorted_f.size() > 1 && toggles_before > 0) {
-
-            // Perform the sort
-            final_f = OOO::HammingDistanceSort(unsorted_f);
-
-            // Calculate the new raw toggles
-            toggles_after = OOO::calculateSwitchingToggles(final_f);
-        }
+        // In Order-is-Power, flits are transmitted in original FIFO order
+        // (no sorting at NI; arbitration handles Hamming distance at the router switch)
 
         // Attaching the packet-level toggle stats to the HEAD flit
         if (!final_f.empty()) {
