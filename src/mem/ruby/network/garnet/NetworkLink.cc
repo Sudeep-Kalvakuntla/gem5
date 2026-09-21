@@ -61,6 +61,9 @@ NetworkLink::NetworkLink(const Params &p)
     for (int i = 0; i < num_vnets; i++) {
         mVnets[i] = p.supported_vnets[i];
     }
+    m_has_last_link_flit = false;
+    m_link_switches = 0;
+    m_link_possible_switches = 0;
 }
 
 void
@@ -94,18 +97,24 @@ NetworkLink::wakeup()
         DPRINTF(RubyNetwork, "Transmission will finish at %ld :%s\n",
                 clockEdge(m_latency), *t_flit);
 
-        // Accumulate stats once per packet traversal using the HEAD flit
-        if (t_flit->get_type() == HEAD_ || t_flit->get_type() == HEAD_TAIL_) {
-            if (t_flit->get_possible_toggles() > 0) {
-                NetworkInterface::globalTotalPossibleSwitches += t_flit->get_possible_toggles();
-                NetworkInterface::globalTotalSwitchesBefore += t_flit->get_toggles_before();
-                NetworkInterface::globalTotalSwitchesAfter += t_flit->get_toggles_after();
-                NetworkInterface::globalTotalPackets++;
-                double prob_before_pct = ((double)NetworkInterface::globalTotalSwitchesBefore / NetworkInterface::globalTotalPossibleSwitches) * 100.0;
-                double prob_after_pct = ((double)NetworkInterface::globalTotalSwitchesAfter / NetworkInterface::globalTotalPossibleSwitches) * 100.0;
-                DPRINTF(OOO, "Hop Stats - Prob Before: %f, After: %f\n", prob_before_pct, prob_after_pct);
-            }
+        // Track physical wire bit transitions between consecutive flits on this link
+        if (m_has_last_link_flit) {
+            int toggles = OOO::HammingDistance(m_last_link_flit_bin, t_flit->flit_bin);
+            m_link_switches += toggles;
+            m_link_possible_switches += bitWidth;
+
+            NetworkInterface::globalTotalSwitchesAfter += toggles;
+            NetworkInterface::globalTotalPossibleSwitches += bitWidth;
+
+            double global_prob_pct = ((double)NetworkInterface::globalTotalSwitchesAfter /
+                                      NetworkInterface::globalTotalPossibleSwitches) * 100.0;
+            double local_prob_pct = ((double)m_link_switches / m_link_possible_switches) * 100.0;
+
+            DPRINTF(OOO, "Link %d (%s): flit %s toggles: %d/%d (local: %.2f%%, global: %.2f%%)\n",
+                    m_id, name(), *t_flit, toggles, bitWidth, local_prob_pct, global_prob_pct);
         }
+        m_last_link_flit_bin = t_flit->flit_bin;
+        m_has_last_link_flit = true;
 
         if (m_type != NUM_LINK_TYPES_) {
             // Only for assertions and debug messages
@@ -134,6 +143,9 @@ NetworkLink::resetStats()
     }
 
     m_link_utilized = 0;
+    m_has_last_link_flit = false;
+    m_link_switches = 0;
+    m_link_possible_switches = 0;
 }
 
 bool

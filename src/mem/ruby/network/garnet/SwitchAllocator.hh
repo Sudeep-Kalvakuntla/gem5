@@ -97,6 +97,8 @@ class SwitchAllocator : public Consumer
     std::vector<bool> m_has_last_outport_flit;
     std::vector<int> m_last_outport_inport;
     std::vector<int> m_last_outport_invc;
+    int m_round_robin_outport;
+    Cycles m_starvation_threshold;
 };
 
 } // namespace garnet

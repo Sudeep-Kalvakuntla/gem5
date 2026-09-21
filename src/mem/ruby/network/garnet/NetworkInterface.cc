@@ -581,6 +581,12 @@ NetworkInterface::flitisizeMessage(MsgPtr msg_ptr, int vnet)
         std::vector<flit*> final_f = unsorted_f;
         int toggles_after = toggles_before;
 
+        // Count injected packet and accumulate baseline intra-packet toggles
+        globalTotalPackets++;
+        if (possible_toggles > 0) {
+            globalTotalSwitchesBefore += toggles_before;
+        }
+
         // In Order-is-Power, flits are transmitted in original FIFO order
         // (no sorting at NI; arbitration handles Hamming distance at the router switch)
 

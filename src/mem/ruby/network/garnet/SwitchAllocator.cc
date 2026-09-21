@@ -55,6 +55,8 @@ SwitchAllocator::SwitchAllocator(Router *router)
 
     m_input_arbiter_activity = 0;
     m_output_arbiter_activity = 0;
+    m_round_robin_outport = 0;
+    m_starvation_threshold = Cycles(32);
 }
 
 void
@@ -71,6 +73,8 @@ SwitchAllocator::init()
     m_has_last_outport_flit.resize(m_num_outports, false);
     m_last_outport_inport.resize(m_num_outports, -1);
     m_last_outport_invc.resize(m_num_outports, -1);
+
+    m_round_robin_outport = 0;
 
     for (int i = 0; i < m_num_inports; i++) {
         m_round_robin_invc[i] = 0;
@@ -115,105 +119,147 @@ SwitchAllocator::wakeup()
  * Places a request for the output port from this input VC.
  */
 
+/*
+ * SA-I (Inport Arbitration):
+ * For each input port, examine all ready VCs that are allowed to send.
+ * 1. Check for starvation: If any VC has been waiting >= m_starvation_threshold
+ *    cycles, mark it starved and prioritize the oldest starved VC.
+ * 2. Otherwise, select the VC whose head flit has the minimum Hamming distance
+ *    to the last flit sent on its target output port (m_last_outport_flit_bin[outport]).
+ * 3. Break ties fairly using rotating round-robin pointer m_round_robin_invc[inport].
+ * 4. Place a request for the winning outport: m_port_requests[inport] = best_outport.
+ */
+
 void
 SwitchAllocator::arbitrate_inports()
 {
-    // Select a VC from each input in a round robin manner
-    // Independent arbiter at each input port
+    Tick starvation_threshold_ticks = m_router->cyclesToTicks(m_starvation_threshold);
+
     for (int inport = 0; inport < m_num_inports; inport++) {
-        int invc = m_round_robin_invc[inport];
+        auto input_unit = m_router->getInputUnit(inport);
+
+        int best_invc = -1;
+        int best_outport = -1;
+        bool found_starved = false;
+        Tick oldest_enqueue_time = 0;
+        int min_dist = HEAD_FLIT_SIZE + 1;
 
         for (int invc_iter = 0; invc_iter < m_num_vcs; invc_iter++) {
-            auto input_unit = m_router->getInputUnit(inport);
+            int invc = (m_round_robin_invc[inport] + invc_iter) % m_num_vcs;
 
             if (input_unit->need_stage(invc, SA_, curTick())) {
-                // This flit is in SA stage
-
                 int outport = input_unit->get_outport(invc);
                 int outvc = input_unit->get_outvc(invc);
 
-                // check if the flit in this InputVC is allowed to be sent
-                // send_allowed conditions described in that function.
-                bool make_request =
-                    send_allowed(inport, invc, outport, outvc);
+                if (send_allowed(inport, invc, outport, outvc)) {
+                    flit *cand_flit = input_unit->peekTopFlit(invc);
+                    if (cand_flit) {
+                        Tick enqueue_time = input_unit->get_enqueue_time(invc);
+                        Tick wait_time = (curTick() > enqueue_time) ?
+                            (curTick() - enqueue_time) : 0;
+                        bool is_starved = (wait_time >= starvation_threshold_ticks);
 
-                if (make_request) {
-                    m_input_arbiter_activity++;
-                    m_port_requests[inport] = outport;
-                    m_vc_winners[inport] = invc;
-
-                    break; // got one vc winner for this port
+                        if (is_starved) {
+                            if (!found_starved || enqueue_time < oldest_enqueue_time) {
+                                found_starved = true;
+                                oldest_enqueue_time = enqueue_time;
+                                best_invc = invc;
+                                best_outport = outport;
+                            }
+                        } else if (!found_starved) {
+                            int dist = (!m_has_last_outport_flit[outport]) ?
+                                (HEAD_FLIT_SIZE / 2) :
+                                OOO::HammingDistance(
+                                    m_last_outport_flit_bin[outport], cand_flit->flit_bin);
+                            if (dist < min_dist) {
+                                min_dist = dist;
+                                best_invc = invc;
+                                best_outport = outport;
+                            }
+                        }
+                    }
                 }
             }
+        }
 
-            invc++;
-            if (invc >= m_num_vcs)
-                invc = 0;
+        if (best_invc != -1) {
+            m_input_arbiter_activity++;
+            m_port_requests[inport] = best_outport;
+            m_vc_winners[inport] = best_invc;
         }
     }
 }
 
 /*
- * SA-II (or SA-o) loops through all output ports,
- * and selects one input VC (that placed a request during SA-I)
- * as the winner for this output port in a round robin manner.
- *      - For HEAD/HEAD_TAIL flits, performs simplified outvc allocation.
- *        (i.e., select a free VC from the output port).
- *      - For BODY/TAIL flits, decrement a credit in the output vc.
- * The winning flit is read out from the input VC and sent to the
- * CrossbarSwitch.
- * An increment_credit signal is sent from the InputUnit
- * to the upstream router. For HEAD_TAIL/TAIL flits, is_free_signal in the
- * credit is set to true.
+ * SA-II (Outport Arbitration):
+ * For each output port, examine all input ports that placed requests for it.
+ * 1. Check for starvation: If any requesting inport's winning VC is starved
+ *    (wait_time >= m_starvation_threshold), prioritize the oldest starved inport.
+ * 2. Otherwise, select the inport whose flit has the minimum Hamming distance
+ *    to the last flit sent on this output port (m_last_outport_flit_bin[outport]).
+ * 3. Break ties fairly using rotating round-robin pointer m_round_robin_inport[outport].
+ * 4. Grant switch traversal to the winner, decrement credits, and update stats.
  */
 
 void
 SwitchAllocator::arbitrate_outports()
 {
-    // Now there are a set of input vc requests for output vcs.
-    // Order-is-Power arbitration:
-    // For each output port, select among requesting inports the one whose
-    // flit has the lowest Hamming distance to the last flit sent on this outport.
-    for (int outport = 0; outport < m_num_outports; outport++) {
+    Tick starvation_threshold_ticks = m_router->cyclesToTicks(m_starvation_threshold);
+
+    for (int outport_iter = 0; outport_iter < m_num_outports; outport_iter++) {
+        int outport = (m_round_robin_outport + outport_iter) % m_num_outports;
+
         int best_inport = -1;
+        bool found_starved = false;
+        Tick oldest_enqueue_time = 0;
         int min_dist = HEAD_FLIT_SIZE + 1;
 
         // Iterate through all inports starting from round-robin pointer for fair tie-breaking
-        int inport = m_round_robin_inport[outport];
         for (int inport_iter = 0; inport_iter < m_num_inports; inport_iter++) {
+            int inport = (m_round_robin_inport[outport] + inport_iter) % m_num_inports;
+
             if (m_port_requests[inport] == outport) {
                 int invc = m_vc_winners[inport];
                 auto input_unit = m_router->getInputUnit(inport);
                 flit *cand_flit = input_unit->peekTopFlit(invc);
 
                 if (cand_flit) {
-                    if (!m_has_last_outport_flit[outport]) {
-                        // First flit on this outport: select the round-robin candidate
-                        best_inport = inport;
-                        break;
-                    } else {
-                        int dist = OOO::HammingDistance(
-                            m_last_outport_flit_bin[outport], cand_flit->flit_bin);
-                        if (dist < min_dist) {
-                            min_dist = dist;
+                    Tick enqueue_time = input_unit->get_enqueue_time(invc);
+                    Tick wait_time = (curTick() > enqueue_time) ?
+                        (curTick() - enqueue_time) : 0;
+                    bool is_starved = (wait_time >= starvation_threshold_ticks);
+
+                    if (is_starved) {
+                        if (!found_starved || enqueue_time < oldest_enqueue_time) {
+                            found_starved = true;
+                            oldest_enqueue_time = enqueue_time;
                             best_inport = inport;
+                        }
+                    } else if (!found_starved) {
+                        if (!m_has_last_outport_flit[outport]) {
+                            // First flit on this outport: select the round-robin candidate
+                            if (best_inport == -1) {
+                                best_inport = inport;
+                            }
+                        } else {
+                            int dist = OOO::HammingDistance(
+                                m_last_outport_flit_bin[outport], cand_flit->flit_bin);
+                            if (dist < min_dist) {
+                                min_dist = dist;
+                                best_inport = inport;
+                            }
                         }
                     }
                 }
             }
-
-            inport++;
-            if (inport >= m_num_inports)
-                inport = 0;
         }
 
         if (best_inport != -1) {
             int inport = best_inport;
+            int invc = m_vc_winners[inport];
+
             auto output_unit = m_router->getOutputUnit(outport);
             auto input_unit = m_router->getInputUnit(inport);
-
-            // grant this outport to this inport
-            int invc = m_vc_winners[inport];
 
             int outvc = input_unit->get_outvc(invc);
             if (outvc == -1) {
@@ -233,25 +279,23 @@ SwitchAllocator::arbitrate_outports()
             DPRINTF(RubyNetwork, "SwitchAllocator at Router %d "
                                  "granted outvc %d at outport %d "
                                  "to invc %d at inport %d to flit %s at "
-                                 "cycle: %lld\n",
+                                 "cycle: %lld (starved: %d)\n",
                     m_router->get_id(), outvc,
                     m_router->getPortDirectionName(
                         output_unit->get_direction()),
                     invc,
                     m_router->getPortDirectionName(
                         input_unit->get_direction()),
-                        *t_flit,
-                    m_router->curCycle());
+                    *t_flit,
+                    m_router->curCycle(),
+                    found_starved);
 
             // Update outport field in the flit since this is
             // used by CrossbarSwitch code to send it out of
             // correct outport.
-            // Note: post route compute in InputUnit,
-            // outport is updated in VC, but not in flit
             t_flit->set_outport(outport);
 
             // set outvc (i.e., invc for next hop) in flit
-            // (This was updated in VC by vc_allocate, but not in flit)
             t_flit->set_vc(outvc);
 
             // decrement credit in outvc
@@ -283,20 +327,16 @@ SwitchAllocator::arbitrate_outports()
             // remove this request
             m_port_requests[inport] = -1;
 
-            // Update Round Robin pointer
-            m_round_robin_inport[outport] = inport + 1;
-            if (m_round_robin_inport[outport] >= m_num_inports)
-                m_round_robin_inport[outport] = 0;
+            // Update Round Robin pointer for inport selection on this outport
+            m_round_robin_inport[outport] = (inport + 1) % m_num_inports;
 
-            // Update Round Robin pointer to the next VC
-            // We do it here to keep it fair.
-            // Only the VC which got switch traversal
-            // is updated.
-            m_round_robin_invc[inport] = invc + 1;
-            if (m_round_robin_invc[inport] >= m_num_vcs)
-                m_round_robin_invc[inport] = 0;
+            // Update Round Robin pointer for VC selection on this inport
+            m_round_robin_invc[inport] = (invc + 1) % m_num_vcs;
         }
     }
+
+    // Rotate outport priority for next cycle to ensure fair access across output ports
+    m_round_robin_outport = (m_round_robin_outport + 1) % m_num_outports;
 }
 
 /*

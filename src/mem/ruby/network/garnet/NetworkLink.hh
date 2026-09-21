@@ -39,6 +39,7 @@
 #include "mem/ruby/common/Consumer.hh"
 #include "mem/ruby/network/garnet/CommonTypes.hh"
 #include "mem/ruby/network/garnet/flitBuffer.hh"
+#include "mem/ruby/network/garnet/OutOfOrder.hh"
 #include "params/NetworkLink.hh"
 #include "sim/clocked_object.hh"
 
@@ -98,6 +99,12 @@ class NetworkLink : public ClockedObject, public Consumer
     // Statistical variables
     unsigned int m_link_utilized;
     std::vector<unsigned int> m_vc_load;
+
+    // Link switching activity tracking (Order is Power)
+    std::bitset<HEAD_FLIT_SIZE> m_last_link_flit_bin;
+    bool m_has_last_link_flit;
+    uint64_t m_link_switches;
+    uint64_t m_link_possible_switches;
 
   protected:
     uint32_t m_virt_nets;
