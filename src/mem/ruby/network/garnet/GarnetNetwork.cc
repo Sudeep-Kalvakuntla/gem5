@@ -32,6 +32,7 @@
 #include "mem/ruby/network/garnet/GarnetNetwork.hh"
 
 #include <cassert>
+#include <iomanip>
 
 #include "base/cast.hh"
 #include "base/compiler.hh"
@@ -548,6 +549,19 @@ GarnetNetwork::regStats()
             m_ctrl_traffic_distribution[source].push_back(ctrl_packets);
         }
     }
+
+    // Order is Power switching activity statistics
+    m_total_link_switches
+        .name(name() + ".total_link_switches")
+        .desc("Total bit transitions on physical links");
+    m_total_link_possible_switches
+        .name(name() + ".total_link_possible_switches")
+        .desc("Total possible bit transitions on physical links");
+    m_avg_link_switching_probability
+        .name(name() + ".avg_link_switching_probability")
+        .desc("Average physical link switching activity");
+    m_avg_link_switching_probability =
+        m_total_link_switches / m_total_link_possible_switches;
 }
 
 void
@@ -555,6 +569,9 @@ GarnetNetwork::collateStats()
 {
     RubySystem *rs = params().ruby_system;
     double time_delta = double(curCycle() - rs->getStartCycle());
+
+    uint64_t total_switches = 0;
+    uint64_t total_possible = 0;
 
     for (int i = 0; i < m_networklinks.size(); i++) {
         link_type type = m_networklinks[i]->getType();
@@ -574,11 +591,32 @@ GarnetNetwork::collateStats()
         for (int j = 0; j < vc_load.size(); j++) {
             m_average_vc_load[j] += ((double)vc_load[j] / time_delta);
         }
+
+        total_switches += m_networklinks[i]->getLinkSwitches();
+        total_possible += m_networklinks[i]->getLinkPossibleSwitches();
     }
+
+    m_total_link_switches = total_switches;
+    m_total_link_possible_switches = total_possible;
 
     // Ask the routers to collate their statistics
     for (int i = 0; i < m_routers.size(); i++) {
         m_routers[i]->collateStats();
+    }
+
+    // Print clean final summary banner to standard console output
+    if (total_possible > 0) {
+        double avg_switching_pct = ((double)total_switches / total_possible) * 100.0;
+        std::cout << "\n"
+                  << "================================================================================\n"
+                  << "                   Order is Power: Switching Activity Summary                   \n"
+                  << "================================================================================\n"
+                  << "  Total Injected Packets:              " << NetworkInterface::globalTotalPackets << "\n"
+                  << "  Total Physical Link Bit Toggles:     " << total_switches << "\n"
+                  << "  Total Possible Bit Transitions:      " << total_possible << "\n"
+                  << "  Average Link Switching Activity:     " << std::fixed << std::setprecision(2) << avg_switching_pct << "%\n"
+                  << "================================================================================\n"
+                  << std::endl;
     }
 }
 
@@ -594,6 +632,11 @@ GarnetNetwork::resetStats()
     for (int i = 0; i < m_creditlinks.size(); i++) {
         m_creditlinks[i]->resetStats();
     }
+
+    NetworkInterface::globalTotalSwitchesAfter = 0;
+    NetworkInterface::globalTotalPossibleSwitches = 0;
+    NetworkInterface::globalTotalSwitchesBefore = 0;
+    NetworkInterface::globalTotalPackets = 0;
 }
 
 void

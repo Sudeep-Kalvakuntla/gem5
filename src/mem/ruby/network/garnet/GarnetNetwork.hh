@@ -200,6 +200,11 @@ class GarnetNetwork : public Network
     statistics::Scalar  m_total_hops;
     statistics::Formula m_avg_hops;
 
+    // Order is Power switching activity statistics
+    statistics::Scalar m_total_link_switches;
+    statistics::Scalar m_total_link_possible_switches;
+    statistics::Formula m_avg_link_switching_probability;
+
     std::vector<std::vector<statistics::Scalar *>> m_data_traffic_distribution;
     std::vector<std::vector<statistics::Scalar *>> m_ctrl_traffic_distribution;
 

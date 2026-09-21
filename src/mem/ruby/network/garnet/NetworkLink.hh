@@ -73,6 +73,8 @@ class NetworkLink : public ClockedObject, public Consumer
 
     unsigned int getLinkUtilization() const { return m_link_utilized; }
     const std::vector<unsigned int> & getVcLoad() const { return m_vc_load; }
+    uint64_t getLinkSwitches() const { return m_link_switches; }
+    uint64_t getLinkPossibleSwitches() const { return m_link_possible_switches; }
 
     inline bool isReady(Tick curTime)
     {
