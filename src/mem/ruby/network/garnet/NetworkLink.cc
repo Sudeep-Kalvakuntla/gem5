@@ -102,11 +102,17 @@ NetworkLink::wakeup()
         if (m_has_last_link_flit) {
             int toggles = OOO::HammingDistance(m_last_link_flit_bin, t_flit->flit_bin);
             m_link_switches += toggles;
-            m_link_possible_switches += bitWidth;
+            m_link_possible_switches += HEAD_FLIT_SIZE;
 
             NetworkInterface::globalTotalSwitchesAfter += toggles;
-            NetworkInterface::globalTotalPossibleSwitches += bitWidth;
+            NetworkInterface::globalTotalPossibleSwitches += HEAD_FLIT_SIZE;
 
+            double global_prob_pct = ((double)NetworkInterface::globalTotalSwitchesAfter /
+                                      NetworkInterface::globalTotalPossibleSwitches) * 100.0;
+            double local_prob_pct = ((double)m_link_switches / m_link_possible_switches) * 100.0;
+
+            DPRINTF(OOO, "Link %d (%s): flit %s toggles: %d/%d (local: %.2f%%, global: %.2f%%)\n",
+                    m_id, name(), *t_flit, toggles, HEAD_FLIT_SIZE, local_prob_pct, global_prob_pct);
             static uint64_t globalFlitTraversals = 0;
             globalFlitTraversals++;
             if (globalFlitTraversals % 1000000 == 0) {
