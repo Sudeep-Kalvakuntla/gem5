@@ -75,6 +75,8 @@ class NetworkLink : public ClockedObject, public Consumer
     const std::vector<unsigned int> & getVcLoad() const { return m_vc_load; }
     uint64_t getLinkSwitches() const { return m_link_switches; }
     uint64_t getLinkPossibleSwitches() const { return m_link_possible_switches; }
+    bool has_last_flit() const { return m_has_last_link_flit; }
+    const std::bitset<HEAD_FLIT_SIZE>& get_last_flit_bin() const { return m_last_link_flit_bin; }
 
     inline bool isReady(Tick curTime)
     {

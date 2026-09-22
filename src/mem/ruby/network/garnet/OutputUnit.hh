@@ -84,6 +84,28 @@ class OutputUnit : public Consumer
         return m_out_link->get_id();
     }
 
+    inline NetworkLink*
+    get_out_link()
+    {
+        return m_out_link;
+    }
+
+    inline bool
+    has_driven_flit()
+    {
+        if (outBuffer.isReady(curTick()))
+            return true;
+        return m_out_link && m_out_link->has_last_flit();
+    }
+
+    inline const std::bitset<HEAD_FLIT_SIZE>&
+    get_driven_flit_bin()
+    {
+        if (outBuffer.isReady(curTick()))
+            return outBuffer.peekTopFlit()->flit_bin;
+        return m_out_link->get_last_flit_bin();
+    }
+
     inline void
     set_vc_state(VC_state_type state, int vc, Tick curTime)
     {

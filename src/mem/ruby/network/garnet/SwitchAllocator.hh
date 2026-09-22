@@ -92,11 +92,6 @@ class SwitchAllocator : public Consumer
     std::vector<int> m_port_requests;
     std::vector<int> m_vc_winners;
 
-    // Order-is-Power tracking for arbitrate_outports
-    std::vector<std::bitset<HEAD_FLIT_SIZE>> m_last_outport_flit_bin;
-    std::vector<bool> m_has_last_outport_flit;
-    std::vector<int> m_last_outport_inport;
-    std::vector<int> m_last_outport_invc;
     int m_round_robin_outport;
     Cycles m_starvation_threshold;
 };
