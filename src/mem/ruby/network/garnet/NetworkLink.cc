@@ -111,13 +111,13 @@ NetworkLink::wakeup()
                                       NetworkInterface::globalTotalPossibleSwitches) * 100.0;
             double local_prob_pct = ((double)m_link_switches / m_link_possible_switches) * 100.0;
 
-            DPRINTF(OOO, "Link %d (%s): flit %s toggles: %d/%d (local: %.2f%%, global: %.2f%%)\n",
-                    m_id, name(), *t_flit, toggles, HEAD_FLIT_SIZE, local_prob_pct, global_prob_pct);
             static uint64_t globalFlitTraversals = 0;
             globalFlitTraversals++;
+
             if (globalFlitTraversals % 1000000 == 0) {
-                double global_prob_pct = ((double)NetworkInterface::globalTotalSwitchesAfter /
-                                          NetworkInterface::globalTotalPossibleSwitches) * 100.0;
+                DPRINTF(OOO, "Link %d (%s): flit %s toggles: %d/%d (local: %.2f%%, global: %.2f%%)\n",
+                        m_id, name(), *t_flit, toggles, HEAD_FLIT_SIZE, local_prob_pct, global_prob_pct);
+                
                 inform("[Garnet Progress] Flits: %lluM | Packets: %lld | Running Avg Link Switching: %.2f%%\n",
                        globalFlitTraversals / 1000000, NetworkInterface::globalTotalPackets, global_prob_pct);
             }
