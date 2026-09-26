@@ -89,8 +89,6 @@ class SwitchAllocator : public Consumer
     Router *m_router;
     std::vector<int> m_round_robin_invc;
     std::vector<int> m_round_robin_inport;
-    std::vector<int> m_port_requests;
-    std::vector<int> m_vc_winners;
 
     int m_round_robin_outport;
     Cycles m_starvation_threshold;

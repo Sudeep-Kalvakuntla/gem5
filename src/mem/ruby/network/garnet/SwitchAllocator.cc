@@ -66,15 +66,11 @@ SwitchAllocator::init()
     m_num_outports = m_router->get_num_outports();
     m_round_robin_inport.resize(m_num_outports);
     m_round_robin_invc.resize(m_num_inports);
-    m_port_requests.resize(m_num_inports);
-    m_vc_winners.resize(m_num_inports);
 
     m_round_robin_outport = 0;
 
     for (int i = 0; i < m_num_inports; i++) {
         m_round_robin_invc[i] = 0;
-        m_port_requests[i] = -1;
-        m_vc_winners[i] = -1;
     }
 
     for (int i = 0; i < m_num_outports; i++) {
@@ -124,57 +120,31 @@ SwitchAllocator::wakeup()
 void
 SwitchAllocator::arbitrate_inports()
 {
-    // Select a VC from each input in a round robin manner
-    // Independent arbiter at each input port
-    for (int inport = 0; inport < m_num_inports; inport++) {
-        int invc = m_round_robin_invc[inport];
-
-        for (int invc_iter = 0; invc_iter < m_num_vcs; invc_iter++) {
-            auto input_unit = m_router->getInputUnit(inport);
-
-            if (input_unit->need_stage(invc, SA_, curTick())) {
-                // This flit is in SA stage
-
-                int outport = input_unit->get_outport(invc);
-                int outvc = input_unit->get_outvc(invc);
-
-                // check if the flit in this InputVC is allowed to be sent
-                // send_allowed conditions described in that function.
-                bool make_request =
-                    send_allowed(inport, invc, outport, outvc);
-
-                if (make_request) {
-                    m_input_arbiter_activity++;
-                    m_port_requests[inport] = outport;
-                    m_vc_winners[inport] = invc;
-
-                    break; // got one vc winner for this port
-                }
-            }
-
-            invc++;
-            if (invc >= m_num_vcs)
-                invc = 0;
-        }
-    }
+    // In "The True Fix" for SPI, we abandon the 2-stage separable allocator.
+    // We do NOT perform Round-Robin inport arbitration here, because that would
+    // artificially restrict the candidate pool of VCs for the Hamming distance
+    // minimization in arbitrate_outports().
+    // All global arbitration logic is now handled in arbitrate_outports().
 }
 
 /*
- * SA-II (Outport Arbitration):
- * For each output port, examine all input ports that placed requests for it.
- * 1. Check for starvation: If any requesting inport's winning VC is starved
- *    (wait_time >= m_starvation_threshold), prioritize the oldest starved inport.
- * 2. Otherwise, select the inport whose flit has the minimum Hamming distance
- *    to the flit actually driven on the physical link in the current cycle
- *    (queried via output_unit->get_driven_flit_bin()).
- * 3. Break ties fairly using rotating round-robin pointer m_round_robin_inport[outport].
- * 4. Grant switch traversal to the winner, decrement credits, and update stats.
+ * SA-II (Global Non-Separable Arbitration for SPI):
+ * For each output port, examine ALL input ports and ALL VCs that request it.
+ * 1. Gather all ready VCs across all inports that request this outport and
+ *    are allowed to send.
+ * 2. Check for starvation globally across these candidates. Prioritize the oldest.
+ * 3. Otherwise, select the (inport, invc) pair that yields the absolute minimum
+ *    Hamming distance to the physical link's last driven flit.
+ * 4. Ensure an inport only wins one outport per cycle (crossbar constraint) via
+ *    inport_matched tracking.
  */
 
 void
 SwitchAllocator::arbitrate_outports()
 {
     Tick starvation_threshold_ticks = m_router->cyclesToTicks(m_starvation_threshold);
+    std::vector<bool> inport_matched(m_num_inports, false);
+    std::vector<bool> inport_has_request(m_num_inports, false);
 
     for (int outport_iter = 0; outport_iter < m_num_outports; outport_iter++) {
         int outport = (m_round_robin_outport + outport_iter) % m_num_outports;
@@ -187,6 +157,7 @@ SwitchAllocator::arbitrate_outports()
         }
 
         int best_inport = -1;
+        int best_invc = -1;
         bool found_starved = false;
         Tick oldest_enqueue_time = 0;
         int min_dist = HEAD_FLIT_SIZE + 1;
@@ -195,35 +166,57 @@ SwitchAllocator::arbitrate_outports()
         for (int inport_iter = 0; inport_iter < m_num_inports; inport_iter++) {
             int inport = (m_round_robin_inport[outport] + inport_iter) % m_num_inports;
 
-            if (m_port_requests[inport] == outport) {
-                int invc = m_vc_winners[inport];
-                auto input_unit = m_router->getInputUnit(inport);
-                flit *cand_flit = input_unit->peekTopFlit(invc);
+            if (inport_matched[inport]) continue; // This inport already won another outport this cycle
 
-                if (cand_flit) {
-                    Tick enqueue_time = input_unit->get_enqueue_time(invc);
-                    Tick wait_time = (curTick() > enqueue_time) ?
-                        (curTick() - enqueue_time) : 0;
-                    bool is_starved = (wait_time >= starvation_threshold_ticks);
+            auto input_unit = m_router->getInputUnit(inport);
 
-                    if (is_starved) {
-                        if (!found_starved || enqueue_time < oldest_enqueue_time) {
-                            found_starved = true;
-                            oldest_enqueue_time = enqueue_time;
-                            best_inport = inport;
-                        }
-                    } else if (!found_starved) {
-                        if (!has_driven_flit) {
-                            // First flit on this physical link: select the round-robin candidate
-                            if (best_inport == -1) {
-                                best_inport = inport;
+            // Check all VCs of this inport starting from round-robin pointer
+            for (int invc_iter = 0; invc_iter < m_num_vcs; invc_iter++) {
+                int invc = (m_round_robin_invc[inport] + invc_iter) % m_num_vcs;
+
+                if (input_unit->need_stage(invc, SA_, curTick())) {
+                    int req_outport = input_unit->get_outport(invc);
+
+                    if (req_outport == outport) {
+                        int outvc = input_unit->get_outvc(invc);
+                        if (send_allowed(inport, invc, outport, outvc)) {
+                            
+                            if (!inport_has_request[inport]) {
+                                inport_has_request[inport] = true;
+                                m_input_arbiter_activity++;
                             }
-                        } else {
-                            int dist = OOO::HammingDistance(
-                                last_driven_bin, cand_flit->flit_bin);
-                            if (dist < min_dist) {
-                                min_dist = dist;
-                                best_inport = inport;
+
+                            flit *cand_flit = input_unit->peekTopFlit(invc);
+                            if (cand_flit) {
+                                Tick enqueue_time = input_unit->get_enqueue_time(invc);
+                                Tick wait_time = (curTick() > enqueue_time) ?
+                                    (curTick() - enqueue_time) : 0;
+                                bool is_starved = (wait_time >= starvation_threshold_ticks);
+
+                                if (is_starved) {
+                                    if (!found_starved || enqueue_time < oldest_enqueue_time) {
+                                        found_starved = true;
+                                        oldest_enqueue_time = enqueue_time;
+                                        best_inport = inport;
+                                        best_invc = invc;
+                                    }
+                                } else if (!found_starved) {
+                                    if (!has_driven_flit) {
+                                        // First flit on this physical link: select round-robin candidate
+                                        if (best_inport == -1) {
+                                            best_inport = inport;
+                                            best_invc = invc;
+                                        }
+                                    } else {
+                                        int dist = OOO::HammingDistance(
+                                            last_driven_bin, cand_flit->flit_bin);
+                                        if (dist < min_dist) {
+                                            min_dist = dist;
+                                            best_inport = inport;
+                                            best_invc = invc;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -231,9 +224,11 @@ SwitchAllocator::arbitrate_outports()
             }
         }
 
-        if (best_inport != -1) {
+        if (best_inport != -1 && best_invc != -1) {
             int inport = best_inport;
-            int invc = m_vc_winners[inport];
+            int invc = best_invc;
+            
+            inport_matched[inport] = true;
 
             auto input_unit = m_router->getInputUnit(inport);
 
@@ -293,9 +288,6 @@ SwitchAllocator::arbitrate_outports()
                 // but do not indicate that the VC is idle
                 input_unit->increment_credit(invc, false, curTick());
             }
-
-            // remove this request
-            m_port_requests[inport] = -1;
 
             // Update Round Robin pointer for inport selection on this outport
             m_round_robin_inport[outport] = (inport + 1) % m_num_inports;
@@ -429,7 +421,7 @@ SwitchAllocator::get_vnet(int invc)
 void
 SwitchAllocator::clear_request_vector()
 {
-    std::fill(m_port_requests.begin(), m_port_requests.end(), -1);
+    // No longer used in global non-separable SPI allocator
 }
 
 void
