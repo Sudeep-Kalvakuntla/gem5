@@ -66,6 +66,8 @@ SwitchAllocator::init()
     m_num_outports = m_router->get_num_outports();
     m_round_robin_inport.resize(m_num_outports);
     m_round_robin_invc.resize(m_num_inports);
+    m_last_granted_flit.resize(m_num_outports);
+    m_has_granted_flit.resize(m_num_outports, false);
 
     m_round_robin_outport = 0;
 
@@ -75,6 +77,7 @@ SwitchAllocator::init()
 
     for (int i = 0; i < m_num_outports; i++) {
         m_round_robin_inport[i] = 0;
+        m_has_granted_flit[i] = false;
     }
 }
 
@@ -150,9 +153,13 @@ SwitchAllocator::arbitrate_outports()
         int outport = (m_round_robin_outport + outport_iter) % m_num_outports;
 
         auto output_unit = m_router->getOutputUnit(outport);
-        bool has_driven_flit = output_unit->has_driven_flit();
+        bool has_driven_flit = m_has_granted_flit[outport];
         std::bitset<HEAD_FLIT_SIZE> last_driven_bin;
+
         if (has_driven_flit) {
+            last_driven_bin = m_last_granted_flit[outport];
+        } else if (output_unit->has_driven_flit()) {
+            has_driven_flit = true;
             last_driven_bin = output_unit->get_driven_flit_bin();
         }
 
@@ -270,6 +277,9 @@ SwitchAllocator::arbitrate_outports()
             t_flit->advance_stage(ST_, curTick());
             m_router->grant_switch(inport, t_flit);
             m_output_arbiter_activity++;
+            
+            m_last_granted_flit[outport] = t_flit->flit_bin;
+            m_has_granted_flit[outport] = true;
 
             if ((t_flit->get_type() == TAIL_) ||
                 (t_flit->get_type() == HEAD_TAIL_)) {

@@ -90,6 +90,9 @@ class SwitchAllocator : public Consumer
     std::vector<int> m_round_robin_invc;
     std::vector<int> m_round_robin_inport;
 
+    std::vector<std::bitset<HEAD_FLIT_SIZE>> m_last_granted_flit;
+    std::vector<bool> m_has_granted_flit;
+
     int m_round_robin_outport;
     Cycles m_starvation_threshold;
 };
