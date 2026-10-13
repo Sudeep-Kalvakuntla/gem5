@@ -585,6 +585,8 @@ while True:
             print("Timing insts:", timing_cpus[0].totalInsts())
 
             m5.stats.dump()
+            print("=== Simulation Exit ===")
+            break
 
         # FINAL EXIT
         elif roi_state >= 3:
