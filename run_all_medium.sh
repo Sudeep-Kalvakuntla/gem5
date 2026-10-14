@@ -1,11 +1,11 @@
 #!/bin/bash
 # ==============================================================================
 # Script: run_all_medium.sh
-# Description: Sequentially executes all remaining PARSEC medium workloads in gem5
+# Description: Sequentially executes all PARSEC medium workloads in gem5
 #              within the Docker container environment.
-# Workloads: bodytrack, dedup, facesim, ferret, fluidanimate, freqmine,
-#            raytrace, streamcluster, swaptions, vips, x264
-# (blackscholes and canneal are excluded by default as they were already run)
+# Workloads (13 total):
+#   blackscholes, bodytrack, canneal, dedup, facesim, ferret, fluidanimate,
+#   freqmine, raytrace, streamcluster, swaptions, vips, x264
 # ==============================================================================
 
 set -u
@@ -27,9 +27,11 @@ OUTPUT_DIR="/output"
 
 mkdir -p "$OUTPUT_DIR"
 
-# Remaining 11 medium workloads
+# All 13 PARSEC medium workloads
 DEFAULT_WORKLOADS=(
+    "blackscholes"
     "bodytrack"
+    "canneal"
     "dedup"
     "facesim"
     "ferret"
@@ -42,7 +44,7 @@ DEFAULT_WORKLOADS=(
     "x264"
 )
 
-# Allow passing custom subset of workloads via CLI: ./run_all_medium.sh fluidanimate x264
+# Allow passing custom subset of workloads via CLI: ./run_all_medium.sh blackscholes canneal
 if [ $# -gt 0 ]; then
     WORKLOADS=("$@")
 else

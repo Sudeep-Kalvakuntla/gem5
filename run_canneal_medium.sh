@@ -17,12 +17,17 @@ mkdir -p "$OUTPUT_DIR" 2>/dev/null || OUTPUT_DIR="/tmp"
 
 export LD_LIBRARY_PATH=$HOOKS_LIB:$LD_LIBRARY_PATH
 
+# Extract simmedium input archive
 tar -xvf $INPUT_DIR/input_simmedium.tar -C $INPUT_DIR
+
+# Pre-warm DRAM page cache in fast KVM mode
+cat $INPUT_DIR/200000.nets > /dev/null 2>&1
+
+cd $BENCH_DIR
 
 echo "Starting ROI"
 /sbin/m5 exit 1
 
-cd $BENCH_DIR
 $BINARY 4 15000 2000 $INPUT_DIR/200000.nets 64
 
 echo "Ending ROI"
