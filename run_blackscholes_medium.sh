@@ -25,10 +25,10 @@ cat $INPUT_DIR/in_16K.txt > /dev/null 2>&1
 
 cd $BENCH_DIR
 
-# Launch Blackscholes:
-# Internal PARSEC hooks (m5_work_begin/end) will automatically trigger
-# ROI START and ROI END strictly around the multi-threaded pricing calculation.
+echo "Starting ROI"
+/sbin/m5 exit 1
+
 $BINARY 4 $INPUT_DIR/in_16K.txt $OUTPUT_DIR/prices.txt
 
-# Fallback exit
+echo "Ending ROI"
 /sbin/m5 exit 2
