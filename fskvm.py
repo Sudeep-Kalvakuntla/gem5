@@ -549,13 +549,51 @@ while True:
     print("Exit cause:", cause)
     print("ROI state:", roi_state)
 
-    if cause == "m5_exit instruction encountered" or cause == "m5_exit":
+    # 1. Internal PARSEC Hooks (m5_work_begin / m5_work_end) - Isolates Parallel Compute Kernel
+    if cause in ["workbegin", "m5_workbegin instruction encountered"]:
+        if roi_state == 0:
+            print("=== ROI START (workbegin) ===")
+            print("CPU before switch:", type(test_sys.cpu[0]))
+            print("Instructions before ROI:", test_sys.cpu[0].totalInsts())
+
+            print("Switching CPUs...")
+            m5.switchCpus(test_sys, switch_list)
+
+            # allow switch to settle
+            m5.simulate(1)
+
+            print("CPU switch status:")
+            for i in range(np):
+                print(
+                    f"core{i}",
+                    "KVM switchedOut:", test_sys.cpu[i].switchedOut(),
+                    "Timing switchedOut:", timing_cpus[i].switchedOut()
+                )
+
+            m5.stats.reset()
+            roi_state = 1
+        exit_event = m5.simulate()
+        continue
+
+    elif cause in ["workend", "m5_workend instruction encountered"]:
+        if roi_state == 1:
+            print("=== ROI END (workend) ===")
+            print("Instructions after ROI:", timing_cpus[0].totalInsts())
+            print("KVM insts:", test_sys.cpu[0].totalInsts())
+            print("Timing insts:", timing_cpus[0].totalInsts())
+
+            m5.stats.dump()
+            print("=== Simulation Exit ===")
+            break
+
+    # 2. Script-Level Fallback (m5_exit)
+    elif cause in ["m5_exit instruction encountered", "m5_exit"]:
 
         roi_state += 1
 
         # ROI BEGIN
         if roi_state == 1:
-            print("=== ROI START ===")
+            print("=== ROI START (m5_exit) ===")
 
             print("CPU before switch:", type(test_sys.cpu[0]))
             print("Instructions before ROI:", test_sys.cpu[0].totalInsts())
@@ -578,7 +616,7 @@ while True:
 
         # ROI END
         elif roi_state == 2:
-            print("=== ROI END ===")
+            print("=== ROI END (m5_exit) ===")
 
             print("Instructions after ROI:", timing_cpus[0].totalInsts())
             print("KVM insts:", test_sys.cpu[0].totalInsts())

@@ -49,6 +49,8 @@ namespace ruby
 namespace garnet
 {
 
+static uint64_t globalFlitTraversals = 0;
+
 NetworkLink::NetworkLink(const Params &p)
     : ClockedObject(p), Consumer(this), m_id(p.link_id),
       m_type(NUM_LINK_TYPES_),
@@ -112,7 +114,6 @@ NetworkLink::wakeup()
                                           NetworkInterface::globalTotalPossibleSwitches) * 100.0;
                 double local_prob_pct = ((double)m_link_switches / m_link_possible_switches) * 100.0;
 
-                static uint64_t globalFlitTraversals = 0;
                 globalFlitTraversals++;
 
                 if (globalFlitTraversals % 1000000 == 0) {
@@ -157,6 +158,7 @@ NetworkLink::resetStats()
     m_has_last_link_flit = false;
     m_link_switches = 0;
     m_link_possible_switches = 0;
+    globalFlitTraversals = 0;
 }
 
 bool
