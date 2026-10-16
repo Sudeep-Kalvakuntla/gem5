@@ -35,7 +35,26 @@ cd $BENCH_DIR
 echo "Starting ROI"
 /sbin/m5 exit 1
 
-$BINARY $INPUT_DIR/happy_buddha.obj -automove -nthreads 4 -frames 3 -res 960 540
+# Launch raytrace in background and monitor for completion.
+# PARSEC raytrace has a known bug where worker threads hang in pthread_join
+# during post-ROI destructor cleanup after printing "Done".
+rm -f /tmp/rt.log
+$BINARY $INPUT_DIR/happy_buddha.obj -automove -nthreads 4 -frames 3 -res 960 540 > /tmp/rt.log 2>&1 &
+B_PID=$!
+
+while kill -0 $B_PID 2>/dev/null; do
+    if grep -q "Done" /tmp/rt.log 2>/dev/null; then
+        cat /tmp/rt.log
+        sleep 1
+        kill -9 $B_PID 2>/dev/null || true
+        break
+    fi
+    sleep 1
+done
+
+if [ -f /tmp/rt.log ]; then
+    cat /tmp/rt.log
+fi
 
 echo "Ending ROI"
 /sbin/m5 exit 2
