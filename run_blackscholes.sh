@@ -17,6 +17,7 @@ mkdir -p "$OUTPUT_DIR" 2>/dev/null || OUTPUT_DIR="/tmp"
 
 export LD_LIBRARY_PATH=$HOOKS_LIB:$LD_LIBRARY_PATH
 
+# Extract simsmall input archive
 tar -xvf $INPUT_DIR/input_simsmall.tar -C $INPUT_DIR
 
 # Pre-warm DRAM page cache in fast KVM mode (eliminates disk I/O latency)

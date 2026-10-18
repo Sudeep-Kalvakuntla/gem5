@@ -2,24 +2,39 @@
 echo "Boot done"
 sleep 2
 
-PARSEC_DIR="/home/gem5/parsec-benchmark"
+if [ -d "/home/gem5/parsec-benchmark" ]; then
+    PARSEC_DIR="/home/gem5/parsec-benchmark"
+else
+    PARSEC_DIR="/home/parsec-benchmark"
+fi
+
 BENCH_DIR="$PARSEC_DIR/pkgs/apps/vips"
 HOOKS_LIB="$PARSEC_DIR/pkgs/libs/hooks/inst/amd64-linux.gcc-hooks/lib"
 BINARY="$BENCH_DIR/inst/amd64-linux.gcc-hooks/bin/vips"
 INPUT_DIR="$BENCH_DIR/inputs"
 OUTPUT_DIR="/home/gem5"
+mkdir -p "$OUTPUT_DIR" 2>/dev/null || OUTPUT_DIR="/tmp"
 
 export LD_LIBRARY_PATH=$HOOKS_LIB:$LD_LIBRARY_PATH
 
+# Extract simsmall input archive
 tar -xvf $INPUT_DIR/input_simsmall.tar -C $INPUT_DIR
+
+if [ -f "$INPUT_DIR/pomegranate_1600x1200.v" ]; then
+    VIPS_IN="$INPUT_DIR/pomegranate_1600x1200.v"
+else
+    VIPS_IN="$(ls $INPUT_DIR/*.v 2>/dev/null | head -n 1)"
+fi
+
+# Pre-warm DRAM page cache in fast KVM mode
+cat "$VIPS_IN" > /dev/null 2>&1
+
+cd $BENCH_DIR
 
 echo "Starting ROI"
 /sbin/m5 exit 1
-sleep 1
 
-cd $BENCH_DIR
-$BINARY im_benchmark $INPUT_DIR/pomegranate_1600x1200.v $OUTPUT_DIR/output.v
+$BINARY im_benchmark "$VIPS_IN" $OUTPUT_DIR/output.v
 
 echo "Ending ROI"
 /sbin/m5 exit 2
-sleep 1
