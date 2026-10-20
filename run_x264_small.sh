@@ -46,7 +46,7 @@ ulimit -s unlimited 2>/dev/null || ulimit -s 65536 2>/dev/null || true
 echo "Starting ROI"
 /sbin/m5 exit 1
 
-$BINARY --quiet --qp 20 --partitions b8x8,i4x4 --ref 5 --direct auto --weightb --mixed-refs --no-fast-pskip --me umh --subme 7 --threads 4 -o $OUTPUT_DIR/eledream.264 "$X264_IN"
+$BINARY --no-asm --quiet --qp 20 --partitions b8x8,i4x4 --ref 5 --direct auto --weightb --mixed-refs --no-fast-pskip --me umh --subme 7 --threads 4 -o $OUTPUT_DIR/eledream.264 "$X264_IN"
 
 echo "Ending ROI"
 /sbin/m5 exit 2
