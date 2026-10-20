@@ -10,6 +10,10 @@
 
 set -u
 
+export PYTHONUNBUFFERED=1
+STDBUF=""
+command -v stdbuf >/dev/null 2>&1 && STDBUF="stdbuf -oL -eL"
+
 # Configuration & Paths
 GEM5_BIN="./build/X86_MESI_TWO_LEVEL/gem5.opt"
 if [ ! -x "$GEM5_BIN" ] && [ -x "/gem5/build/X86_MESI_TWO_LEVEL/gem5.opt" ]; then
@@ -95,7 +99,7 @@ for bench in "${WORKLOADS[@]}"; do
     START_SEC=$(date +%s)
 
     # Execute gem5 simulation
-    "$GEM5_BIN" \
+    $STDBUF "$GEM5_BIN" \
         -d "$OUTPUT_DIR" \
         --debug-flags=OOO \
         "$CONFIG" \
