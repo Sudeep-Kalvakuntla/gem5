@@ -48,6 +48,8 @@ namespace ruby
 namespace garnet
 {
 
+uint64_t NetworkLink::globalFlitTraversals = 0;
+
 NetworkLink::NetworkLink(const Params &p)
     : ClockedObject(p), Consumer(this), m_id(p.link_id),
       m_type(NUM_LINK_TYPES_),
@@ -101,10 +103,23 @@ NetworkLink::wakeup()
                 NetworkInterface::globalTotalSwitchesBefore += t_flit->get_toggles_before();
                 NetworkInterface::globalTotalSwitchesAfter += t_flit->get_toggles_after();
                 NetworkInterface::globalTotalPackets++;
-                double prob_before_pct = ((double)NetworkInterface::globalTotalSwitchesBefore / NetworkInterface::globalTotalPossibleSwitches) * 100.0;
-                double prob_after_pct = ((double)NetworkInterface::globalTotalSwitchesAfter / NetworkInterface::globalTotalPossibleSwitches) * 100.0;
-                DPRINTF(OOO, "Hop Stats - Prob Before: %f, After: %f\n", prob_before_pct, prob_after_pct);
             }
+        }
+
+        // Live progress tracking throttled to once every 1,000,000 flits
+        globalFlitTraversals++;
+        if (globalFlitTraversals % 1000000 == 0) {
+            double prob_before_pct = (NetworkInterface::globalTotalPossibleSwitches > 0) ?
+                ((double)NetworkInterface::globalTotalSwitchesBefore / NetworkInterface::globalTotalPossibleSwitches) * 100.0 : 0.0;
+            double prob_after_pct = (NetworkInterface::globalTotalPossibleSwitches > 0) ?
+                ((double)NetworkInterface::globalTotalSwitchesAfter / NetworkInterface::globalTotalPossibleSwitches) * 100.0 : 0.0;
+            double reduction_pct = (NetworkInterface::globalTotalSwitchesBefore > 0) ?
+                ((double)(NetworkInterface::globalTotalSwitchesBefore - NetworkInterface::globalTotalSwitchesAfter) /
+                 NetworkInterface::globalTotalSwitchesBefore) * 100.0 : 0.0;
+
+            inform("[Garnet OOO Progress] Flits: %lluM | Packets: %lld | Prob Before (FIFO): %.2f%% | After (OOO): %.2f%% | Reduction: %.2f%%\n",
+                   globalFlitTraversals / 1000000, NetworkInterface::globalTotalPackets,
+                   prob_before_pct, prob_after_pct, reduction_pct);
         }
 
         if (m_type != NUM_LINK_TYPES_) {
@@ -134,6 +149,7 @@ NetworkLink::resetStats()
     }
 
     m_link_utilized = 0;
+    globalFlitTraversals = 0;
 }
 
 bool

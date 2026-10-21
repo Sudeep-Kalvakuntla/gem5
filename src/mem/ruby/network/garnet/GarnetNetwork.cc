@@ -32,6 +32,7 @@
 #include "mem/ruby/network/garnet/GarnetNetwork.hh"
 
 #include <cassert>
+#include <iomanip>
 
 #include "base/cast.hh"
 #include "base/compiler.hh"
@@ -548,6 +549,32 @@ GarnetNetwork::regStats()
             m_ctrl_traffic_distribution[source].push_back(ctrl_packets);
         }
     }
+
+    // Out-of-Order (OOO) switching activity statistics
+    m_total_switches_before
+        .name(name() + ".total_switches_before")
+        .desc("Total bit transitions before reordering (FIFO baseline)");
+    m_total_switches_after
+        .name(name() + ".total_switches_after")
+        .desc("Total bit transitions after reordering (OOO)");
+    m_total_possible_switches
+        .name(name() + ".total_possible_switches")
+        .desc("Total possible bit transitions on links");
+    m_switching_prob_before
+        .name(name() + ".switching_prob_before")
+        .desc("Switching probability before reordering (FIFO baseline)");
+    m_switching_prob_before =
+        m_total_switches_before / m_total_possible_switches;
+    m_switching_prob_after
+        .name(name() + ".switching_prob_after")
+        .desc("Switching probability after reordering (OOO)");
+    m_switching_prob_after =
+        m_total_switches_after / m_total_possible_switches;
+    m_switching_reduction_percent
+        .name(name() + ".switching_reduction_percent")
+        .desc("Percentage reduction in switching activity ((Before-After)/Before * 100)");
+    m_switching_reduction_percent =
+        ((m_total_switches_before - m_total_switches_after) / m_total_switches_before) * 100.0;
 }
 
 void
@@ -576,9 +603,39 @@ GarnetNetwork::collateStats()
         }
     }
 
+    m_total_switches_before = NetworkInterface::globalTotalSwitchesBefore;
+    m_total_switches_after = NetworkInterface::globalTotalSwitchesAfter;
+    m_total_possible_switches = NetworkInterface::globalTotalPossibleSwitches;
+
     // Ask the routers to collate their statistics
     for (int i = 0; i < m_routers.size(); i++) {
         m_routers[i]->collateStats();
+    }
+
+    // Print clean final summary banner to standard console output
+    if (NetworkInterface::globalTotalPossibleSwitches > 0) {
+        double prob_before_pct = ((double)NetworkInterface::globalTotalSwitchesBefore /
+                                  NetworkInterface::globalTotalPossibleSwitches) * 100.0;
+        double prob_after_pct = ((double)NetworkInterface::globalTotalSwitchesAfter /
+                                 NetworkInterface::globalTotalPossibleSwitches) * 100.0;
+        double reduction_pct = (NetworkInterface::globalTotalSwitchesBefore > 0) ?
+            ((double)(NetworkInterface::globalTotalSwitchesBefore - NetworkInterface::globalTotalSwitchesAfter) /
+             NetworkInterface::globalTotalSwitchesBefore) * 100.0 : 0.0;
+
+        std::cout << "\n"
+                  << "================================================================================\n"
+                  << "        Out-of-Order (Body Flit Reordering): Switching Activity Summary         \n"
+                  << "================================================================================\n"
+                  << "  Total Injected Packets:              " << NetworkInterface::globalTotalPackets << "\n"
+                  << "  Total Possible Bit Transitions:      " << NetworkInterface::globalTotalPossibleSwitches << "\n"
+                  << "  Before Reordering (FIFO) Toggles:    " << NetworkInterface::globalTotalSwitchesBefore << "\n"
+                  << "  After Reordering (OOO) Toggles:      " << NetworkInterface::globalTotalSwitchesAfter << "\n"
+                  << "  ----------------------------------------------------------------------------\n"
+                  << "  Switching Probability Before (FIFO): " << std::fixed << std::setprecision(2) << prob_before_pct << "%\n"
+                  << "  Switching Probability After (OOO):   " << std::fixed << std::setprecision(2) << prob_after_pct << "%\n"
+                  << "  Switching Activity Reduction:        " << std::fixed << std::setprecision(2) << reduction_pct << "%\n"
+                  << "================================================================================\n"
+                  << std::endl;
     }
 }
 
@@ -594,6 +651,12 @@ GarnetNetwork::resetStats()
     for (int i = 0; i < m_creditlinks.size(); i++) {
         m_creditlinks[i]->resetStats();
     }
+
+    NetworkInterface::globalTotalSwitchesBefore = 0;
+    NetworkInterface::globalTotalSwitchesAfter = 0;
+    NetworkInterface::globalTotalPossibleSwitches = 0;
+    NetworkInterface::globalTotalPackets = 0;
+    NetworkLink::globalFlitTraversals = 0;
 }
 
 void

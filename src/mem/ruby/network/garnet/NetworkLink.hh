@@ -88,6 +88,8 @@ class NetworkLink : public ClockedObject, public Consumer
     std::vector<int> mVnets;
     uint32_t bitWidth;
 
+    static uint64_t globalFlitTraversals;
+
   private:
     const int m_id;
     link_type m_type;

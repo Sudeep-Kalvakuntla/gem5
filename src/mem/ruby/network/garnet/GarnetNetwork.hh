@@ -200,6 +200,14 @@ class GarnetNetwork : public Network
     statistics::Scalar  m_total_hops;
     statistics::Formula m_avg_hops;
 
+    // Out-of-Order (OOO) switching activity statistics
+    statistics::Scalar m_total_switches_before;
+    statistics::Scalar m_total_switches_after;
+    statistics::Scalar m_total_possible_switches;
+    statistics::Formula m_switching_prob_before;
+    statistics::Formula m_switching_prob_after;
+    statistics::Formula m_switching_reduction_percent;
+
     std::vector<std::vector<statistics::Scalar *>> m_data_traffic_distribution;
     std::vector<std::vector<statistics::Scalar *>> m_ctrl_traffic_distribution;
 

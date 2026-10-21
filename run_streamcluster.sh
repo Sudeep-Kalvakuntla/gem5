@@ -1,0 +1,30 @@
+#!/bin/sh
+echo "Boot done"
+sleep 2
+
+if [ -d "/home/gem5/parsec-benchmark" ]; then
+    PARSEC_DIR="/home/gem5/parsec-benchmark"
+else
+    PARSEC_DIR="/home/parsec-benchmark"
+fi
+
+BENCH_DIR="$PARSEC_DIR/pkgs/kernels/streamcluster"
+HOOKS_LIB="$PARSEC_DIR/pkgs/libs/hooks/inst/amd64-linux.gcc-hooks/lib"
+BINARY="$BENCH_DIR/inst/amd64-linux.gcc-hooks/bin/streamcluster"
+INPUT_DIR="$BENCH_DIR/inputs"
+OUTPUT_DIR="/home/gem5"
+mkdir -p "$OUTPUT_DIR" 2>/dev/null || OUTPUT_DIR="/tmp"
+
+export LD_LIBRARY_PATH=$HOOKS_LIB:$LD_LIBRARY_PATH
+
+# No input archive to extract for streamcluster
+
+cd $BENCH_DIR
+
+echo "Starting ROI"
+/sbin/m5 exit 1
+
+$BINARY 10 20 32 4096 4096 1000 none $OUTPUT_DIR/output.txt 4
+
+echo "Ending ROI"
+/sbin/m5 exit 2
