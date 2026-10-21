@@ -83,7 +83,7 @@ def define_options(parser):
         "--vcs-per-vnet",
         action="store",
         type=int,
-        default=4,
+        default=1,
         help="""number of virtual channels per virtual network
             inside garnet network.""",
     )

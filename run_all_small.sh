@@ -117,7 +117,7 @@ for bench in "${WORKLOADS[@]}"; do
         --mesh-rows=2 \
         --link-width-bits=64 \
         --num-dirs=4 \
-        --vcs-per-vnet=4 \
+        --vcs-per-vnet=1 \
         --num-l2caches=4 \
         --kernel="$KERNEL" \
         --disk-image="$DISK_IMAGE" \
