@@ -27,8 +27,9 @@ fi
 
 KERNEL="/parsec-benchmark/x86-linux-kernel-5.4.49"
 DISK_IMAGE="/parsec-benchmark/parsec.img"
-OUTPUT_DIR="/output"
 
+# Dedicated baseline output directory (/output/before -> ~/Low-Power/outputs/gem5_OIP/before/)
+OUTPUT_DIR="/output/before"
 mkdir -p "$OUTPUT_DIR"
 
 # All 13 PARSEC medium workloads

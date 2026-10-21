@@ -609,7 +609,7 @@ GarnetNetwork::collateStats()
         double avg_switching_pct = ((double)total_switches / total_possible) * 100.0;
         std::cout << "\n"
                   << "================================================================================\n"
-                  << "                   Order is Power: Switching Activity Summary                   \n"
+                  << "             Baseline (gem5 Default): Switching Activity Summary                \n"
                   << "================================================================================\n"
                   << "  Total Injected Packets:              " << NetworkInterface::globalTotalPackets << "\n"
                   << "  Total Physical Link Bit Toggles:     " << total_switches << "\n"

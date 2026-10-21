@@ -55,8 +55,6 @@ SwitchAllocator::SwitchAllocator(Router *router)
 
     m_input_arbiter_activity = 0;
     m_output_arbiter_activity = 0;
-    m_round_robin_outport = 0;
-    m_starvation_threshold = Cycles(32);
 }
 
 void
@@ -68,10 +66,6 @@ SwitchAllocator::init()
     m_round_robin_invc.resize(m_num_inports);
     m_port_requests.resize(m_num_inports);
     m_vc_winners.resize(m_num_inports);
-    m_last_granted_flit.resize(m_num_outports);
-    m_has_granted_flit.resize(m_num_outports, false);
-
-    m_round_robin_outport = 0;
 
     for (int i = 0; i < m_num_inports; i++) {
         m_round_robin_invc[i] = 0;
@@ -81,7 +75,6 @@ SwitchAllocator::init()
 
     for (int i = 0; i < m_num_outports; i++) {
         m_round_robin_inport[i] = 0;
-        m_has_granted_flit[i] = false;
     }
 }
 
@@ -145,158 +138,118 @@ SwitchAllocator::arbitrate_inports()
 }
 
 /*
- * SA-II (Hamming-Aware Outport Arbitration for Order-is-Power):
- * For each output port, examine all input ports that placed requests for it.
- * 1. Anti-Starvation: If any requesting inport's candidate flit has been waiting
- *    >= m_starvation_threshold cycles, prioritize the oldest starved inport.
- * 2. Order-is-Power: Otherwise, select the requesting inport whose flit minimizes
- *    the Hamming distance to the physical link's last driven / granted flit.
- * 3. Fair Tie-Breaking: Broken using rotating round-robin pointer m_round_robin_inport[outport].
+ * SA-II (or SA-o) loops through all output ports,
+ * and selects one input VC (that placed a request during SA-I)
+ * as the winner for this output port in a round robin manner.
+ *      - For HEAD/HEAD_TAIL flits, performs simplified outvc allocation.
+ *        (i.e., select a free VC from the output port).
+ *      - For BODY/TAIL flits, decrement a credit in the output vc.
+ * The winning flit is read out from the input VC and sent to the
+ * CrossbarSwitch.
+ * An increment_credit signal is sent from the InputUnit
+ * to the upstream router. For HEAD_TAIL/TAIL flits, is_free_signal in the
+ * credit is set to true.
  */
 
 void
 SwitchAllocator::arbitrate_outports()
 {
-    Tick starvation_threshold_ticks = m_router->cyclesToTicks(m_starvation_threshold);
+    // Now there are a set of input vc requests for output vcs.
+    // Again do round robin arbitration on these requests
+    // Independent arbiter at each output port
+    for (int outport = 0; outport < m_num_outports; outport++) {
+        int inport = m_round_robin_inport[outport];
 
-    for (int outport_iter = 0; outport_iter < m_num_outports; outport_iter++) {
-        int outport = (m_round_robin_outport + outport_iter) % m_num_outports;
+        for (int inport_iter = 0; inport_iter < m_num_inports;
+                 inport_iter++) {
 
-        auto output_unit = m_router->getOutputUnit(outport);
-        bool has_driven_flit = m_has_granted_flit[outport];
-        std::bitset<HEAD_FLIT_SIZE> last_driven_bin;
-
-        if (has_driven_flit) {
-            last_driven_bin = m_last_granted_flit[outport];
-        } else if (output_unit->has_driven_flit()) {
-            has_driven_flit = true;
-            last_driven_bin = output_unit->get_driven_flit_bin();
-        }
-
-        int best_inport = -1;
-        bool found_starved = false;
-        Tick oldest_enqueue_time = 0;
-        int min_dist = HEAD_FLIT_SIZE + 1;
-
-        // Iterate through all inports starting from round-robin pointer for fair tie-breaking
-        for (int inport_iter = 0; inport_iter < m_num_inports; inport_iter++) {
-            int inport = (m_round_robin_inport[outport] + inport_iter) % m_num_inports;
-
+            // inport has a request this cycle for outport
             if (m_port_requests[inport] == outport) {
+                auto output_unit = m_router->getOutputUnit(outport);
                 int invc = m_vc_winners[inport];
+
                 auto input_unit = m_router->getInputUnit(inport);
-                flit *cand_flit = input_unit->peekTopFlit(invc);
 
-                if (cand_flit) {
-                    Tick enqueue_time = input_unit->get_enqueue_time(invc);
-                    Tick wait_time = (curTick() > enqueue_time) ?
-                        (curTick() - enqueue_time) : 0;
-                    bool is_starved = (wait_time >= starvation_threshold_ticks);
-
-                    if (is_starved) {
-                        if (!found_starved || enqueue_time < oldest_enqueue_time) {
-                            found_starved = true;
-                            oldest_enqueue_time = enqueue_time;
-                            best_inport = inport;
-                        }
-                    } else if (!found_starved) {
-                        if (!has_driven_flit) {
-                            // First flit on this physical link: select round-robin candidate
-                            if (best_inport == -1) {
-                                best_inport = inport;
-                            }
-                        } else {
-                            int dist = OOO::HammingDistance(
-                                last_driven_bin, cand_flit->flit_bin);
-                            if (dist < min_dist) {
-                                min_dist = dist;
-                                best_inport = inport;
-                            }
-                        }
-                    }
+                int outvc = input_unit->get_outvc(invc);
+                if (outvc == -1) {
+                    // VC Allocation - select any free VC from outport
+                    outvc = vc_allocate(outport, inport, invc);
                 }
+
+                // remove flit from Input VC
+                flit *t_flit = input_unit->getTopFlit(invc);
+
+                DPRINTF(RubyNetwork, "SwitchAllocator at Router %d "
+                                     "granted outvc %d at outport %d "
+                                     "to invc %d at inport %d to flit %s at "
+                                     "cycle: %lld\n",
+                        m_router->get_id(), outvc,
+                        m_router->getPortDirectionName(
+                            output_unit->get_direction()),
+                        invc,
+                        m_router->getPortDirectionName(
+                            input_unit->get_direction()),
+                        *t_flit,
+                        m_router->curCycle());
+
+                // Update outport field in the flit since this is
+                // used by CrossbarSwitch code to send it out of
+                // correct outport.
+                t_flit->set_outport(outport);
+
+                // set outvc (i.e., invc for next hop) in flit
+                t_flit->set_vc(outvc);
+
+                // decrement credit in outvc
+                output_unit->decrement_credit(outvc);
+
+                // flit ready for Switch Traversal
+                t_flit->advance_stage(ST_, curTick());
+                m_router->grant_switch(inport, t_flit);
+                m_output_arbiter_activity++;
+
+                if ((t_flit->get_type() == TAIL_) ||
+                    (t_flit->get_type() == HEAD_TAIL_)) {
+
+                    // This Input VC should now be empty
+                    assert(!(input_unit->isReady(invc, curTick())));
+
+                    // Free this VC
+                    input_unit->set_vc_idle(invc, curTick());
+
+                    // Send a credit back
+                    // along with the information that this VC is now idle
+                    input_unit->increment_credit(invc, true, curTick());
+                } else {
+                    // Send a credit back
+                    // but do not indicate that the VC is idle
+                    input_unit->increment_credit(invc, false, curTick());
+                }
+
+                // remove this request
+                m_port_requests[inport] = -1;
+
+                // Update Round Robin pointer
+                m_round_robin_inport[outport] = inport + 1;
+                if (m_round_robin_inport[outport] >= m_num_inports)
+                    m_round_robin_inport[outport] = 0;
+
+                // Update Round Robin pointer to the next VC
+                // We do it here to keep it fair.
+                // Only the VC which got switch traversal
+                // is updated.
+                m_round_robin_invc[inport] = invc + 1;
+                if (m_round_robin_invc[inport] >= m_num_vcs)
+                    m_round_robin_invc[inport] = 0;
+
+                break; // got a input winner for this outport
             }
-        }
 
-        if (best_inport != -1) {
-            int inport = best_inport;
-            int invc = m_vc_winners[inport];
-
-            auto input_unit = m_router->getInputUnit(inport);
-
-            int outvc = input_unit->get_outvc(invc);
-            if (outvc == -1) {
-                // VC Allocation - select any free VC from outport
-                outvc = vc_allocate(outport, inport, invc);
-            }
-
-            // remove flit from Input VC
-            flit *t_flit = input_unit->getTopFlit(invc);
-
-            DPRINTF(RubyNetwork, "SwitchAllocator at Router %d "
-                                 "granted outvc %d at outport %d "
-                                 "to invc %d at inport %d to flit %s at "
-                                 "cycle: %lld (starved: %d)\n",
-                    m_router->get_id(), outvc,
-                    m_router->getPortDirectionName(
-                        output_unit->get_direction()),
-                    invc,
-                    m_router->getPortDirectionName(
-                        input_unit->get_direction()),
-                    *t_flit,
-                    m_router->curCycle(),
-                    found_starved);
-
-            // Update outport field in the flit since this is
-            // used by CrossbarSwitch code to send it out of
-            // correct outport.
-            t_flit->set_outport(outport);
-
-            // set outvc (i.e., invc for next hop) in flit
-            t_flit->set_vc(outvc);
-
-            // decrement credit in outvc
-            output_unit->decrement_credit(outvc);
-
-            // flit ready for Switch Traversal
-            t_flit->advance_stage(ST_, curTick());
-            m_router->grant_switch(inport, t_flit);
-            m_output_arbiter_activity++;
-            
-            m_last_granted_flit[outport] = t_flit->flit_bin;
-            m_has_granted_flit[outport] = true;
-
-            if ((t_flit->get_type() == TAIL_) ||
-                (t_flit->get_type() == HEAD_TAIL_)) {
-
-                // This Input VC should now be empty
-                assert(!(input_unit->isReady(invc, curTick())));
-
-                // Free this VC
-                input_unit->set_vc_idle(invc, curTick());
-
-                // Send a credit back
-                // along with the information that this VC is now idle
-                input_unit->increment_credit(invc, true, curTick());
-            } else {
-                // Send a credit back
-                // but do not indicate that the VC is idle
-                input_unit->increment_credit(invc, false, curTick());
-            }
-
-            // remove this request
-            m_port_requests[inport] = -1;
-
-            // Update Round Robin pointer for inport selection on this outport
-            m_round_robin_inport[outport] = (inport + 1) % m_num_inports;
-
-            // Update Round Robin pointer for VC selection on this inport
-            m_round_robin_invc[inport] = (invc + 1) % m_num_vcs;
+            inport++;
+            if (inport >= m_num_inports)
+                inport = 0;
         }
     }
-
-    // Rotate outport priority for next cycle to ensure fair access across output ports
-    m_round_robin_outport = (m_round_robin_outport + 1) % m_num_outports;
 }
 
 /*

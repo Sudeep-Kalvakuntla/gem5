@@ -29,8 +29,8 @@ fi
 KERNEL="/parsec-benchmark/x86-linux-kernel-5.4.49"
 DISK_IMAGE="/parsec-benchmark/parsec.img"
 
-# Dedicated output directory inside gem5_OIP (/output/small -> ~/Low-Power/outputs/gem5_OIP/small/)
-OUTPUT_DIR="/output/small"
+# Dedicated baseline output directory (/output/before/small -> ~/Low-Power/outputs/gem5_OIP/before/small/)
+OUTPUT_DIR="/output/before/small"
 mkdir -p "$OUTPUT_DIR"
 
 # All 13 PARSEC small workloads

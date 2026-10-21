@@ -37,7 +37,6 @@
 
 #include "mem/ruby/common/Consumer.hh"
 #include "mem/ruby/network/garnet/CommonTypes.hh"
-#include "mem/ruby/network/garnet/OutOfOrder.hh"
 
 namespace gem5
 {
@@ -91,12 +90,6 @@ class SwitchAllocator : public Consumer
     std::vector<int> m_round_robin_inport;
     std::vector<int> m_port_requests;
     std::vector<int> m_vc_winners;
-
-    std::vector<std::bitset<HEAD_FLIT_SIZE>> m_last_granted_flit;
-    std::vector<bool> m_has_granted_flit;
-
-    int m_round_robin_outport;
-    Cycles m_starvation_threshold;
 };
 
 } // namespace garnet
