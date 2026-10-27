@@ -30,7 +30,8 @@ KERNEL="/parsec-benchmark/x86-linux-kernel-5.4.49"
 DISK_IMAGE="/parsec-benchmark/parsec.img"
 
 # Dedicated output directory inside gem5_OIP (/output/small -> ~/Low-Power/outputs/gem5_OIP/small/)
-OUTPUT_DIR="/output/small"
+: "${OUTPUT_DIR:=/output/small}"
+: "${VCS_PER_VNET:=4}"
 mkdir -p "$OUTPUT_DIR"
 
 # All 13 PARSEC small workloads
@@ -117,7 +118,7 @@ for bench in "${WORKLOADS[@]}"; do
         --mesh-rows=2 \
         --link-width-bits=64 \
         --num-dirs=4 \
-        --vcs-per-vnet=4 \
+        --vcs-per-vnet="$VCS_PER_VNET" \
         --num-l2caches=4 \
         --kernel="$KERNEL" \
         --disk-image="$DISK_IMAGE" \

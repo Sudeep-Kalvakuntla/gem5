@@ -18,13 +18,13 @@ namespace OOO{
 #define FLIT_SIZE              64
 
 //                                  Head flit format (64 bits)
-//   63               47      43       39       31       23       15        7        0
+//   63               51      43       39       31       23       15        7        0
 // +----------------+-------+--------+--------+--------+--------+--------+--------+
 // |      rsvd      | vc_id |  type  | src_ni | src_rt | dst_ni | dst_rt |  hops  |
 // +----------------+-------+--------+--------+--------+--------+--------+--------+
-// |       16       |   4   |   4    |   8    |   8    |   8    |   8    |   8    |
+// |       12       |   8   |   4    |   8    |   8    |   8    |   8    |   8    |
 // +----------------+-------+--------+--------+--------+--------+--------+--------+
-// |       48       |  44   |  40    |   32   |   24   |   16   |   8    |   0    |
+// |       52       |  44   |  40    |   32   |   24   |   16   |   8    |   0    |
 
 // --- Head Flit Widths ---
 #define W_PAYLOAD_HEAD         0 
@@ -34,9 +34,9 @@ namespace OOO{
 #define W_SRC_ROUTER_HEAD      8
 #define W_SRC_NI_HEAD          8
 #define W_TYPE_HEAD            4
-#define W_VC_ID_HEAD           4
+#define W_VC_ID_HEAD           8
 #define W_SEQ_NUM_HEAD         0
-#define W_RESERVED_HEAD        16
+#define W_RESERVED_HEAD        12
 
 // --- Head Flit Cumulative Offsets ---
 #define O_PAYLOAD_HEAD         0
