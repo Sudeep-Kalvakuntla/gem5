@@ -16,8 +16,20 @@ STDBUF=""
 command -v stdbuf >/dev/null 2>&1 && STDBUF="stdbuf -oL -eL"
 
 ROOT_DIR="/gem5"
-[ -d "$ROOT_DIR" ] || ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+[ -d "$ROOT_DIR" ] || ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT_DIR"
+
+find_run_all_small() {
+    if [ -f "${ROOT_DIR}/scripts/parsec/run_all_small.sh" ]; then
+        echo "${ROOT_DIR}/scripts/parsec/run_all_small.sh"
+    elif [ -f "${ROOT_DIR}/run_all_small.sh" ]; then
+        echo "${ROOT_DIR}/run_all_small.sh"
+    elif [ -f "./scripts/parsec/run_all_small.sh" ]; then
+        echo "./scripts/parsec/run_all_small.sh"
+    else
+        echo "./run_all_small.sh"
+    fi
+}
 
 # Configuration
 VCS=6
@@ -82,7 +94,8 @@ echo "[*] Compiling gem5 for Baseline (OIP_Before)..."
 scons build/X86_MESI_TWO_LEVEL/gem5.opt --linker=gold -j"${BUILD_JOBS}"
 
 echo "[*] Running Baseline workloads: ${WORKLOADS[*]}..."
-OUTPUT_DIR="${BEFORE_OUT}" VCS_PER_VNET="${VCS}" ./run_all_small.sh "${WORKLOADS[@]}"
+RUN_ALL_SMALL="$(find_run_all_small)"
+OUTPUT_DIR="${BEFORE_OUT}" VCS_PER_VNET="${VCS}" "$RUN_ALL_SMALL" "${WORKLOADS[@]}"
 
 # ------------------------------------------------------------------------------
 # PHASE 2: Order-is-Power Hamming-Aware Arbitration (Order-is-Power)
@@ -99,7 +112,8 @@ echo "[*] Compiling gem5 for Order-is-Power..."
 scons build/X86_MESI_TWO_LEVEL/gem5.opt --linker=gold -j"${BUILD_JOBS}"
 
 echo "[*] Running Order-is-Power workloads: ${WORKLOADS[*]}..."
-OUTPUT_DIR="${AFTER_OUT}" VCS_PER_VNET="${VCS}" ./run_all_small.sh "${WORKLOADS[@]}"
+RUN_ALL_SMALL="$(find_run_all_small)"
+OUTPUT_DIR="${AFTER_OUT}" VCS_PER_VNET="${VCS}" "$RUN_ALL_SMALL" "${WORKLOADS[@]}"
 
 # ------------------------------------------------------------------------------
 # PHASE 3: Comparative Analysis & Summary Report

@@ -4,7 +4,7 @@
 # Description: Host-side one-click launcher for the 6 VCs OIP study.
 # Usage on host (LowPower@D1531):
 #   cd ~/Low-Power/gem5
-#   ./launch_vc6_study.sh
+#   ./scripts/studies/launch_vc6_study.sh
 # ==============================================================================
 
 set -euo pipefail
@@ -30,4 +30,4 @@ docker run --rm \
   -e LANG=C.UTF-8 \
   -e LC_ALL=C.UTF-8 \
   -it ghcr.io/gem5/ubuntu-22.04_all-dependencies:v23-0 \
-  /gem5/run_oip_vc6_study.sh "$@"
+  bash -c 'if [ -f /gem5/scripts/studies/run_oip_vc6_study.sh ]; then exec /gem5/scripts/studies/run_oip_vc6_study.sh "$@"; else exec /gem5/run_oip_vc6_study.sh "$@"; fi' -- "$@"
