@@ -33,8 +33,9 @@ fi
 KERNEL="/parsec-benchmark/x86-linux-kernel-5.4.49"
 DISK_IMAGE="/parsec-benchmark/parsec.img"
 
-# Dedicated baseline output directory (/output/before -> ~/Low-Power/outputs/gem5_OIP/before/)
-OUTPUT_DIR="/output/before"
+# Dedicated baseline output directory (/output/before/medium -> ~/Low-Power/outputs/gem5_OIP/before/medium/)
+: "${OUTPUT_DIR:=/output/before/medium}"
+: "${VCS_PER_VNET:=4}"
 mkdir -p "$OUTPUT_DIR"
 
 # All 13 PARSEC medium workloads
@@ -125,7 +126,7 @@ for bench in "${WORKLOADS[@]}"; do
         --mesh-rows=2 \
         --link-width-bits=64 \
         --num-dirs=4 \
-        --vcs-per-vnet=4 \
+        --vcs-per-vnet="$VCS_PER_VNET" \
         --num-l2caches=4 \
         --kernel="$KERNEL" \
         --disk-image="$DISK_IMAGE" \
