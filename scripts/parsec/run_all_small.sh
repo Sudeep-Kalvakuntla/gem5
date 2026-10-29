@@ -1,8 +1,9 @@
 #!/bin/bash
 # ==============================================================================
-# Script: run_all_medium.sh
-# Description: Sequentially executes all PARSEC medium workloads in gem5
+# Script: run_all_small.sh
+# Description: Sequentially executes all 13 PARSEC small workloads in gem5
 #              within the Docker container environment.
+#              Stores outputs into a dedicated subdirectory inside gem5_OIP (/output/small)
 # Workloads (13 total):
 #   blackscholes, bodytrack, canneal, dedup, facesim, ferret, fluidanimate,
 #   freqmine, raytrace, streamcluster, swaptions, vips, x264
@@ -15,23 +16,30 @@ STDBUF=""
 command -v stdbuf >/dev/null 2>&1 && STDBUF="stdbuf -oL -eL"
 
 # Configuration & Paths
-GEM5_BIN="./build/X86_MESI_TWO_LEVEL/gem5.opt"
-if [ ! -x "$GEM5_BIN" ] && [ -x "/gem5/build/X86_MESI_TWO_LEVEL/gem5.opt" ]; then
-    GEM5_BIN="/gem5/build/X86_MESI_TWO_LEVEL/gem5.opt"
+ROOT_DIR="/gem5"
+if [ ! -d "$ROOT_DIR" ]; then
+    ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 fi
 
-CONFIG="configs/deprecated/example/fskvm.py"
-if [ ! -f "$CONFIG" ] && [ -f "/gem5/configs/deprecated/example/fskvm.py" ]; then
-    CONFIG="/gem5/configs/deprecated/example/fskvm.py"
+GEM5_BIN="${ROOT_DIR}/build/X86_MESI_TWO_LEVEL/gem5.opt"
+if [ ! -x "$GEM5_BIN" ] && [ -x "./build/X86_MESI_TWO_LEVEL/gem5.opt" ]; then
+    GEM5_BIN="./build/X86_MESI_TWO_LEVEL/gem5.opt"
+fi
+
+CONFIG="${ROOT_DIR}/configs/deprecated/example/fskvm.py"
+if [ ! -f "$CONFIG" ] && [ -f "configs/deprecated/example/fskvm.py" ]; then
+    CONFIG="configs/deprecated/example/fskvm.py"
 fi
 
 KERNEL="/parsec-benchmark/x86-linux-kernel-5.4.49"
 DISK_IMAGE="/parsec-benchmark/parsec.img"
-OUTPUT_DIR="/output"
 
+# Dedicated output directory inside gem5_OIP (/output/small -> ~/Low-Power/outputs/gem5_OIP/small/)
+: "${OUTPUT_DIR:=/output/small}"
+: "${VCS_PER_VNET:=4}"
 mkdir -p "$OUTPUT_DIR"
 
-# All 13 PARSEC medium workloads
+# All 13 PARSEC small workloads
 DEFAULT_WORKLOADS=(
     "blackscholes"
     "bodytrack"
@@ -48,7 +56,7 @@ DEFAULT_WORKLOADS=(
     "x264"
 )
 
-# Allow passing custom subset of workloads via CLI: ./run_all_medium.sh blackscholes canneal
+# Allow passing custom subset of workloads via CLI: ./run_all_small.sh blackscholes canneal
 if [ $# -gt 0 ]; then
     WORKLOADS=("$@")
 else
@@ -60,7 +68,7 @@ declare -A BENCH_STATUS
 declare -A BENCH_DURATION
 
 echo "========================================================================"
-echo " Starting PARSEC Medium Workload Batch Execution"
+echo " Starting PARSEC Small Workload Batch Execution"
 echo " Total benchmarks queued: ${TOTAL_BENCHMARKS}"
 echo " Workloads: ${WORKLOADS[*]}"
 echo " Start time: $(date)"
@@ -71,26 +79,38 @@ INDEX=0
 for bench in "${WORKLOADS[@]}"; do
     INDEX=$((INDEX + 1))
     
-    # Locate workload script
-    SCRIPT="/gem5/run_${bench}_medium.sh"
-    if [ ! -f "$SCRIPT" ] && [ -f "./run_${bench}_medium.sh" ]; then
-        SCRIPT="./run_${bench}_medium.sh"
-    fi
+    # Locate workload script (checks small/ subfolder first, then legacy locations)
+    SCRIPT=""
+    for candidate in \
+        "${ROOT_DIR}/scripts/parsec/small/run_${bench}_small.sh" \
+        "${ROOT_DIR}/scripts/parsec/small/run_${bench}.sh" \
+        "${ROOT_DIR}/run_${bench}_small.sh" \
+        "${ROOT_DIR}/run_${bench}.sh" \
+        "./scripts/parsec/small/run_${bench}_small.sh" \
+        "./scripts/parsec/small/run_${bench}.sh" \
+        "./run_${bench}_small.sh" \
+        "./run_${bench}.sh"
+    do
+        if [ -f "$candidate" ]; then
+            SCRIPT="$candidate"
+            break
+        fi
+    done
 
-    if [ ! -f "$SCRIPT" ]; then
-        echo "[-] ERROR: Script not found for ${bench}: ${SCRIPT}. Skipping."
+    if [ -z "$SCRIPT" ] || [ ! -f "$SCRIPT" ]; then
+        echo "[-] ERROR: Script not found for ${bench}: searched small/ and root. Skipping."
         BENCH_STATUS["$bench"]="SCRIPT_NOT_FOUND"
         BENCH_DURATION["$bench"]="0s"
         continue
     fi
 
-    LOG_FILE="${OUTPUT_DIR}/simulation-${bench}-med.log"
-    BENCH_OUTDIR="${OUTPUT_DIR}/${bench}_med"
+    LOG_FILE="${OUTPUT_DIR}/simulation-${bench}-small.log"
+    BENCH_OUTDIR="${OUTPUT_DIR}/${bench}_small"
     mkdir -p "$BENCH_OUTDIR"
 
     echo ""
     echo "------------------------------------------------------------------------"
-    echo " [${INDEX}/${TOTAL_BENCHMARKS}] Running: ${bench} (simmedium)"
+    echo " [${INDEX}/${TOTAL_BENCHMARKS}] Running: ${bench} (simsmall)"
     echo " Script: ${SCRIPT}"
     echo " Log file: ${LOG_FILE}"
     echo " Started: $(date '+%Y-%m-%d %H:%M:%S')"
@@ -98,7 +118,7 @@ for bench in "${WORKLOADS[@]}"; do
 
     START_SEC=$(date +%s)
 
-    # Execute gem5 simulation
+    # Execute gem5 simulation targeting /output/small
     $STDBUF "$GEM5_BIN" \
         -d "$OUTPUT_DIR" \
         --debug-flags=OOO \
@@ -111,7 +131,7 @@ for bench in "${WORKLOADS[@]}"; do
         --mesh-rows=2 \
         --link-width-bits=64 \
         --num-dirs=4 \
-        --vcs-per-vnet=4 \
+        --vcs-per-vnet="$VCS_PER_VNET" \
         --num-l2caches=4 \
         --kernel="$KERNEL" \
         --disk-image="$DISK_IMAGE" \
@@ -128,7 +148,7 @@ for bench in "${WORKLOADS[@]}"; do
 
     # Preserve benchmark specific outputs
     if [ -f "${OUTPUT_DIR}/stats.txt" ]; then
-        cp "${OUTPUT_DIR}/stats.txt" "${OUTPUT_DIR}/stats-${bench}-med.txt" 2>/dev/null || true
+        cp "${OUTPUT_DIR}/stats.txt" "${OUTPUT_DIR}/stats-${bench}-small.txt" 2>/dev/null || true
         cp "${OUTPUT_DIR}/stats.txt" "${BENCH_OUTDIR}/stats.txt" 2>/dev/null || true
     fi
     if [ -f "${OUTPUT_DIR}/config.ini" ]; then
@@ -153,7 +173,7 @@ done
 
 echo ""
 echo "========================================================================"
-echo " PARSEC Medium Batch Execution Summary"
+echo " PARSEC Small Batch Execution Summary"
 echo " Finished at: $(date)"
 echo "========================================================================"
 printf "%-20s %-15s %-15s\n" "Benchmark" "Status" "Duration"
