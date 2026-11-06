@@ -24,12 +24,16 @@ fi
 
 if [ -z "$TARGET_DIR" ]; then
     CANDIDATES=(
+        "/output/ooo/medium"
         "/output/ooo/small"
         "/output/ooo"
+        "${HOME}/Low-Power/outputs/gem5_OIP/ooo/medium"
         "${HOME}/Low-Power/outputs/gem5_OIP/ooo/small"
         "${HOME}/Low-Power/outputs/gem5_OIP/ooo"
+        "./outputs/gem5_OIP/ooo/medium"
         "./outputs/gem5_OIP/ooo/small"
         "./outputs/gem5_OIP/ooo"
+        "./output/ooo/medium"
         "./output/ooo/small"
         "./output/ooo"
         "."

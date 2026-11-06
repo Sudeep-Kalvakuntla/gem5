@@ -2,13 +2,16 @@
 # ==============================================================================
 # Script: run_all_medium.sh
 # Description: Sequentially executes all PARSEC medium workloads in gem5
-#              within the Docker container environment.
+#              within the Docker container environment for Out-of-Order (OoO).
 # Workloads (13 total):
 #   blackscholes, bodytrack, canneal, dedup, facesim, ferret, fluidanimate,
 #   freqmine, raytrace, streamcluster, swaptions, vips, x264
 # ==============================================================================
 
 set -u
+
+# Ensure git safe directory inside Docker containers
+git config --global --add safe.directory "*" 2>/dev/null || true
 
 export PYTHONUNBUFFERED=1
 STDBUF=""
@@ -28,9 +31,12 @@ fi
 KERNEL="/parsec-benchmark/x86-linux-kernel-5.4.49"
 DISK_IMAGE="/parsec-benchmark/parsec.img"
 
-# Dedicated output directory for Out-of-Order runs (/output/ooo -> ~/Low-Power/outputs/gem5_OIP/ooo/)
-: "${OUTPUT_DIR:=/output/ooo}"
+# Dedicated output directory for Out-of-Order medium runs (/output/ooo/medium -> ~/Low-Power/outputs/gem5_OIP/ooo/medium/)
+: "${OUTPUT_DIR:=/output/ooo/medium}"
 mkdir -p "$OUTPUT_DIR"
+
+# Virtual Channels per Virtual Network (default: 1 for OoO)
+: "${VCS_PER_VNET:=1}"
 
 # All 13 PARSEC medium workloads
 DEFAULT_WORKLOADS=(
@@ -61,9 +67,10 @@ declare -A BENCH_STATUS
 declare -A BENCH_DURATION
 
 echo "========================================================================"
-echo " Starting PARSEC Medium Workload Batch Execution"
+echo " Starting PARSEC Medium Workload Batch Execution (OoO)"
 echo " Total benchmarks queued: ${TOTAL_BENCHMARKS}"
 echo " Workloads: ${WORKLOADS[*]}"
+echo " Virtual Channels: ${VCS_PER_VNET} VCs per vnet"
 echo " Start time: $(date)"
 echo " Output directory: ${OUTPUT_DIR}"
 echo "========================================================================"
@@ -76,6 +83,10 @@ for bench in "${WORKLOADS[@]}"; do
     SCRIPT="/gem5/run_${bench}_medium.sh"
     if [ ! -f "$SCRIPT" ] && [ -f "./run_${bench}_medium.sh" ]; then
         SCRIPT="./run_${bench}_medium.sh"
+    elif [ ! -f "$SCRIPT" ] && [ -f "/gem5/scripts/parsec/medium/run_${bench}_medium.sh" ]; then
+        SCRIPT="/gem5/scripts/parsec/medium/run_${bench}_medium.sh"
+    elif [ ! -f "$SCRIPT" ] && [ -f "./scripts/parsec/medium/run_${bench}_medium.sh" ]; then
+        SCRIPT="./scripts/parsec/medium/run_${bench}_medium.sh"
     fi
 
     if [ ! -f "$SCRIPT" ]; then
@@ -112,7 +123,7 @@ for bench in "${WORKLOADS[@]}"; do
         --mesh-rows=2 \
         --link-width-bits=64 \
         --num-dirs=4 \
-        --vcs-per-vnet=1 \
+        --vcs-per-vnet="${VCS_PER_VNET}" \
         --num-l2caches=4 \
         --kernel="$KERNEL" \
         --disk-image="$DISK_IMAGE" \
@@ -163,3 +174,20 @@ for bench in "${WORKLOADS[@]}"; do
     printf "%-20s %-15s %-15s\n" "$bench" "${BENCH_STATUS[$bench]:-UNKNOWN}" "${BENCH_DURATION[$bench]:-UNKNOWN}"
 done
 echo "========================================================================"
+
+# Auto-collate if collation script exists
+COLLATE_SCRIPT=""
+if [ -x "/gem5/collate_ooo_medium_stats.sh" ]; then
+    COLLATE_SCRIPT="/gem5/collate_ooo_medium_stats.sh"
+elif [ -x "./collate_ooo_medium_stats.sh" ]; then
+    COLLATE_SCRIPT="./collate_ooo_medium_stats.sh"
+elif [ -x "/gem5/collate_ooo_stats.sh" ]; then
+    COLLATE_SCRIPT="/gem5/collate_ooo_stats.sh"
+elif [ -x "./collate_ooo_stats.sh" ]; then
+    COLLATE_SCRIPT="./collate_ooo_stats.sh"
+fi
+
+if [ -n "$COLLATE_SCRIPT" ]; then
+    echo ""
+    "$COLLATE_SCRIPT" "$OUTPUT_DIR" "${WORKLOADS[@]}" || true
+fi
